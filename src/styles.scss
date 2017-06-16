@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap.scss';
+
+@import './styles/__breakpoints.scss';
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+body {
+    background-image: url('./assets/images/struckaxiom.png');    
+    font-family: 'Montserrat', sans-serif;
+    @include respond-to(movil) { 
+        font-size: 16px;
+    }
+    @include respond-to(tablet) { 
+        font-size: 24px;        
+    }   
+}
