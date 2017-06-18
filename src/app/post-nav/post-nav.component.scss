@@ -1,0 +1,42 @@
+@import '../../styles/__breakpoints.scss';
+
+.post_nav__title {
+    font-family: Roboto;
+    background-color: #000;
+    color: white;
+    @include respond-to(movil) { 
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 1em 0.5em 0.3em 0.5em;    
+    }
+    @include respond-to(tablet) { 
+        width: 80%;
+        display: block;
+        text-align: center;
+        padding: 1em 0.5em 0.3em 0.5em;    
+        margin-top: 1em;
+        margin-left: 10%;
+    }
+
+}
+
+.post_nav__subtitle {
+    background-color: #fff;
+    color: black;
+    margin-top: -.5em;
+    @include respond-to(movil) { 
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0.5em 0 1em 0;
+    }
+    @include respond-to(tablet) { 
+        width: 80%;
+        display: block;
+        text-align: center;
+        padding: 0.5em 0 1em 0;
+        margin-left: 10%
+    }
+
+}
