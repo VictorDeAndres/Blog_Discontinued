@@ -1,16 +1,20 @@
+
 <div *ngFor="let post of posts">
     <div class="posts__resume__post">
         <div class="posts__resume__header"></div> 
-        <div class="posts__resume__title">Titulo {{post.title}}</div>
+         <div class="posts__resume__title">
+            <div class="posts__resume__title--star"></div>
+            <div class="posts__resume__title--column">
+                <div class="posts__resume__title--title">{{post.title}}</div>    
+            </div>
+            
+        </div>  
         <div>
             <span class="posts__resume__title__publishedate">Publicado el: </span>
-            <span class="posts__resume__publishedate">{{post.publishedate}}</span>
-            <span class="posts__resume__title__publisheby"> por </span>
-            <span class="posts__resume__publisheby">{{publisheby}}</span>
-        </div>
+            <span class="posts__resume__publishedate">{{post.publisheddate}}</span>
         <div>
             <div class="posts__resume__text">{{post.resume}}</div>
-            <a href="/post/{{id}}" class="posts__resume__link">Leer mas</a>                
+            <a href="/post/{{id}}" class="posts__resume__link">Leer mas</a>
         </div>
     </div>
 </div>

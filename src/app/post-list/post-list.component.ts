@@ -1,32 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 
+import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 import { PostsService } from '../posts.service';
 import { Posts } from '../posts';
-
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 
 @Component({
   selector: 'post-list',
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.scss'],
-  providers: [PostsService]
+  providers: [ PostsService ]
 })
 
 export class PostListComponent implements OnInit {
 
-  items: FirebaseListObservable<any[]>;
-  posts: Posts[];
+  // posts: Posts[];
+  posts : Array<any> = [];
+  item: FirebaseListObservable<any>;
 
-  constructor(private postsService: PostsService, db: AngularFireDatabase) { 
-    this.items = db.list('/Posts');
-    console.info(this.items);
-  }
+  constructor(
+    private postsService: PostsService,
+    db: AngularFireDatabase
+  ) {}
 
   ngOnInit() {
+    this.postsService.loadPost();
     this.posts = this.postsService.getPosts();
-    console.info(this.posts);
+    console.info('OnInit', this.posts );
+
   }
 
 }
