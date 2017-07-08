@@ -1,0 +1,16 @@
+<div class="landing__page">
+  <div [hidden]="showAnimation()" class="loader">
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__ball"></div>
+    <div class="loader__message"> 
+      Loading
+    </div>
+  </div>
+
+  <a class="blog" [hidden]="!showAnimation()" [routerLink]="['/posts']">Blog</a>
+  <h1 [hidden]="!showAnimation()">@Victor_deAndrés</h1>
+</div>  

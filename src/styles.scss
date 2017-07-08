@@ -1,4 +1,4 @@
-@import '~bootstrap/scss/bootstrap.scss';
+// @import '~bootstrap/scss/bootstrap.scss';
 
 @import './styles/__breakpoints.scss';
 
@@ -17,8 +17,21 @@
     src: url('./assets/fonts/BebasNeueBold.otf');
 }
 
+
+html,
+body,
+h1 {
+  margin: 0;
+}
+
+html,
 body {
-    background-image: url('./assets/images/struckaxiom.png');    
+  height: 100%;
+  width: 100%;
+}
+
+body {
+    // background-image: url('./assets/images/struckaxiom.png');  
     font-family: 'Montserrat', sans-serif;
     @include respond-to(movil) { 
         font-size: 16px;
@@ -27,3 +40,4 @@ body {
         font-size: 24px;        
     }   
 }
+

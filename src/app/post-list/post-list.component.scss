@@ -1,3 +1,4 @@
+@import '~bootstrap/scss/bootstrap.scss';
 @import './../../styles/__breakpoints.scss';
 
 .posts__resume__header
@@ -15,17 +16,14 @@
 }
 
 .posts__resume__title--star{
-    width: 5%;
-    height: 120px;
+    height: 50px;
     background: url('./../../assets/images/star.png') no-repeat 0 3px transparent;
-    display: inline-block;
+    float: left;
     @include respond-to(movil) { 
-        width: 10%;
-        height: 100px;
+        width: 12.5%;
     }
     @include respond-to(tablet) { 
-        width: 5%;
-        height: 120px;
+        width: 7.5%;
     }      
 }
 
@@ -58,26 +56,52 @@
 .posts__resume__title__publisheby
 {
     color: #757D81;
-    font-size: 12px;
+    @include respond-to(movil) { 
+        font-size: 12px;        
+    }      
+    @include respond-to(tablet) { 
+        font-size: 14px;
+    }      
+
 }
 
 .posts__resume__publishedate,
 .posts__resume__publisheby
 {
     color: #770025;
-    font-size: 12px;
+    @include respond-to(movil) { 
+        font-size: 12px;        
+    }      
+    @include respond-to(tablet) { 
+        font-size: 14px;
+    }
 }
 
 .posts__resume__text
 {
     padding-top: 1em;
+    font-family: sans-serif;
+    @include respond-to(movil) { 
+        font-size: 18px;     
+        line-height: 24px;   
+    }      
+    @include respond-to(tablet) { 
+        font-size: 26px;
+        line-height: 36px;   
+    }    
+
 }
 
 .posts__resume__link
 {
-    font-size: 60%;
     text-decoration: none;
     color: #7d7c7c;
+    @include respond-to(movil) { 
+        font-size: 12px;        
+    }      
+    @include respond-to(tablet) { 
+        font-size: 14px;
+    }    
 }
 
 .posts__footer {

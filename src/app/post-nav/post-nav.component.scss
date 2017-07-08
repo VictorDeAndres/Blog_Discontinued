@@ -40,3 +40,41 @@
     }
 
 }
+
+.post_nav__categories {
+    @include respond-to(movil) {
+        display: none;
+    } 
+    @include respond-to(tablet) { 
+        display: block;
+        width: 80%;
+        text-align: left;
+        color: #770025;
+        padding: 18px 0 18px 8px;
+        margin: 12px 0 12px 10%;
+        border: #770025;
+        border-width: 3px;
+        border-top-style: solid;
+        border-bottom: solid;
+    }    
+}
+
+.post_nav__categories--category {
+    @include respond-to(movil) {
+        display: none;
+    } 
+    @include respond-to(tablet) { 
+        display: block;
+        width: 60%;
+        text-align: left;
+        padding: 4px 0 4px 8px;
+        margin-left: 20%;
+        font-size: 18px;
+    }    
+}
+
+.post_nav__categories--category:hover {
+    background-color: #cecece;
+    color: #770025;
+    border-radius: 8px;
+}
