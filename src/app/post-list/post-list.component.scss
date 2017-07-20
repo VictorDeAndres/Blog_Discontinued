@@ -1,4 +1,3 @@
-@import '~bootstrap/scss/bootstrap.scss';
 @import './../../styles/__breakpoints.scss';
 
 .posts__resume__header
@@ -40,6 +39,8 @@
 .posts__resume__title--title{
     font-family: BebasNeue;
     font-weight: bold;    
+    text-decoration: none;
+    color: #000;
     @include respond-to(movil) { 
         font-size: 36px;
         line-height: 36px;
@@ -48,12 +49,16 @@
         font-size: 70px;
         line-height: 70px;
     }      
+}
 
-
+a.posts__resume__title--title:hover {
+    color: #000;
+    text-decoration: none;
 }
 
 .posts__resume__title__publishedate,
-.posts__resume__title__publisheby
+.posts__resume__title__publisheby,
+.posts__resume__title__category,
 {
     color: #757D81;
     @include respond-to(movil) { 
@@ -66,15 +71,48 @@
 }
 
 .posts__resume__publishedate,
-.posts__resume__publisheby
+.posts__resume__publisheby,
+.posts__resume__category
 {
-    color: #770025;
     @include respond-to(movil) { 
         font-size: 12px;        
     }      
     @include respond-to(tablet) { 
         font-size: 14px;
     }
+}
+
+.posts__resume__title__category {
+    float: left;
+    margin-right: 8px;
+}
+
+.posts__resume__publishedate,
+.posts__resume__publisheby,
+{
+    color: #770025;
+}
+
+.posts__resume__category {
+    color: #000;
+    float: left;
+}
+
+.posts__resume__category:hover {
+    color: #770025;
+    text-decoration: underline;
+}
+
+.post__resume__categories {
+    &--separator {
+        padding: 0 4px 0 4px;
+        font-size: 12px;
+        float: left;
+    }
+}
+
+a.post__resume__categories--separator:hover {
+    text-decoration: underline;
 }
 
 .posts__resume__text
@@ -114,7 +152,7 @@
     padding: 0 0.5em 0 0.5em;
 }
 
-a:hover {
+a.posts__resume__link:hover {
     color: #770025;
     text-decoration: underline;
 }

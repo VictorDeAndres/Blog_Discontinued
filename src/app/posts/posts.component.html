@@ -1,11 +1,34 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
-          <post-nav class="blog_list__menu"></post-nav>
+          <post-nav class="posts__menu" 
+            [categories]="categories" 
+            [archives]="archives"
+            (category)="selectByCategory($event)"
+            (archived)="selectByArchive($event)"></post-nav>
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-6">
-            <post-list></post-list>
+            <post-list 
+              [posts]="posts"
+              (category)="selectByCategory($event)"></post-list>
+          <div class="row posts__footer">
+              <div class="col-6" >
+                  <span 
+                    [hidden]="initPage" 
+                    (click)="movebackward()">
+                      <i class="fa fa-backward" aria-hidden="true"></i><span class="post__footer__text">Anterior</span>
+                  </span>
+              </div>
+              <div class="col-6 text-right" >
+                  <span 
+                    [hidden]="lastPage" 
+                    (click)="moveforward()">
+                      <span class="post__footer__text">Siguiente</span><i class="fa fa-forward" aria-hidden="true"></i>
+                  </span>
+              </div>
+          </div>            
         </div>
     </div>
+
 </div>

@@ -6,7 +6,7 @@ import { PostsService } from '../services/posts.service';
   selector: 'app-intro',
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.scss'],
-  providers: [ PostsService ]
+  providers: []
 
 })
 export class IntroComponent implements OnInit {
@@ -20,16 +20,12 @@ export class IntroComponent implements OnInit {
 
   ngOnInit() {
 
-    if (( this.postsService.getPosts().length === 0 ) || 
-      ( this.postsService.getCategories().length === 0 ) ||       
-      ( this.postsService.getArchives().length === 0 ) 
-      ){
-
-        this.postsService.loadAlldata().then(
-          () => { this.showLoading = true; },
-          () => console.log("Task Errored!")
-        );
-    }
+    this.postsService.getPosts(0)
+      .then(responsePromise => {
+        this.showLoading = true;
+      },
+        () => { console.error('Error carga'); }
+      );
   }
 
   showAnimation() {

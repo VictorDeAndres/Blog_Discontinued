@@ -1,0 +1,27 @@
+@import './../../styles/__breakpoints.scss';
+
+.posts__menu {
+    @include respond-to(tablet) { 
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 3000;      
+        width: 25%;
+    }          
+}
+
+.posts__footer {
+    margin: 3em 0;
+    font-size: 18px;
+    color: #770025;
+    @include respond-to(movil) { 
+      font-size: 14px;
+    }
+    @include respond-to(tablet) { 
+      font-size: 18px;      
+    }          
+}
+
+.post__footer__text {
+    padding: 0 0.5em 0 0.5em;
+}

@@ -4,17 +4,10 @@
     <div class="post_nav__categories">
       Categorias
     </div>
-    <div class="post_nav__categories--category">
-      Angular
-    </div>
-    <div class="post_nav__categories--category">
-      Webpack
-    </div>
-    <div class="post_nav__categories--category">
-      Vue JS
-    </div>
-    <div class="post_nav__categories--category">
-      Agile
+    <div *ngFor="let category of categories">
+      <div class="post_nav__categories--category" (click)="selectByCategory(category)">
+        {{category}}
+      </div>
     </div>
 
     <br>
@@ -22,12 +15,10 @@
     <div class="post_nav__categories">
       Archivos
     </div>
-    <div class="post_nav__categories--category">
-      Julio 2017
-    </div>
-    <div class="post_nav__categories--category">
-      Agosto 2017
-    </div>
-
+    <div *ngFor="let archive of archives">
+      <div class="post_nav__categories--category" (click)="selectByArchive(archive)">
+        {{archive}}
+      </div>
+    </div>    
 </div>
 
