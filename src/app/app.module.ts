@@ -17,16 +17,11 @@ import { PostCardComponent } from './post-card/post-card.component';
 import { PostNavComponent } from './post-nav/post-nav.component';
 import { PostsComponent } from './posts/posts.component';
 import { IntroComponent } from './intro/intro.component';
+
 import { ToArrayPipe } from './pipes/to-array-key.pipe';
 import { ToArrayValuePipe } from './pipes/to-array-value.pipe';
 
-export const firebaseConfig = {
-  apiKey: "AIzaSyDoSESpawwUQXaqHZkvcMLDmQHjke9Q36Q",
-  authDomain: "fir-crud-93710.firebaseapp.com",
-  databaseURL: "https://blog-d845e.firebaseio.com",
-  storageBucket: "fir-crud-93710.appspot.com",
-  messagingSenderId: "720204736178"
-};
+import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -41,19 +36,9 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    RouterModule.forRoot([
-      {
-        path: 'index', component: IntroComponent
-      },      
-      {
-        path: 'posts', component: PostsComponent
-      },
-      {
-        path: '', redirectTo: '/index', pathMatch: 'full'
-      }      
-    ])    
+    routing
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]

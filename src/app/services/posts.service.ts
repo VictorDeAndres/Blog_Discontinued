@@ -171,6 +171,7 @@ export class PostsService {
   }
 
   initializeDisplayPage(): any {
+    this.currentPage = 0;
     return {
       initPage: true,
       lastPage: this.TOTALNUMBERPAGE > 0 ? false : true

@@ -50,11 +50,11 @@
         width: 80%;
         text-align: left;
         color: #770025;
-        padding: 18px 0 18px 8px;
-        margin: 12px 0 12px 10%;
+        padding: 18px 0 18px 0;
+        margin: 6px 0 12px 10%;
         border: #770025;
-        border-width: 3px;
-        border-top-style: solid;
+        border-width: 2px;
+        // border-top-style: solid;
         border-bottom: solid;
     }    
 }
@@ -74,7 +74,6 @@
 }
 
 .post_nav__categories--category:hover {
-    background-color: #cecece;
     color: #770025;
-    border-radius: 8px;
+    text-decoration: underline;
 }
