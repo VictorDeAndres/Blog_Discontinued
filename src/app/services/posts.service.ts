@@ -14,7 +14,7 @@ export class PostsService {
   categories: Object[] = [];
   archives: Object[] = [];
   currentPage: number = 0;
-  PAGEPERLIST: number = 2;
+  PAGEPERLIST: number = 5;
   TOTALNUMBERPAGE: number;
 
   constructor(    
@@ -149,7 +149,7 @@ export class PostsService {
     }
 
     // Apply filters
-    const displayPost = _.filter(this.posts, 'isEnabled');
+    const displayPost = _.reverse(_.filter(this.posts, 'isEnabled'));
 
     // Recalculate pages
     this.TOTALNUMBERPAGE = _.chunk(displayPost, this.PAGEPERLIST).length - 1 // Number of pages
