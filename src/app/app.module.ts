@@ -12,16 +12,19 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { PostsService } from './services/posts.service';
 
-import { PostListComponent } from './post-list/post-list.component';
-import { PostCardComponent } from './post-card/post-card.component';
-import { PostNavComponent } from './post-nav/post-nav.component';
-import { PostsComponent } from './posts/posts.component';
 import { IntroComponent } from './intro/intro.component';
+import { PostsComponent } from './posts/posts.component';
+import { PostListComponent } from './post-list/post-list.component';
+import { PostNavComponent } from './post-nav/post-nav.component';
+import { PostFooterComponent } from './post-footer/post-footer.component';
 
 import { ToArrayPipe } from './pipes/to-array-key.pipe';
 import { ToArrayValuePipe } from './pipes/to-array-value.pipe';
 
 import { routing } from './app.routes';
+import { WebpackEnTusProyectosAngularComponent } from './post/webpack-en-tus-proyectos-angular/webpack-en-tus-proyectos-angular.component';
+import { SolidCincoPrincipiosBasicosComponent } from './post/solid-cinco-principios-basicos/solid-cinco-principios-basicos.component';
+
 
 @NgModule({
   declarations: [
@@ -29,10 +32,12 @@ import { routing } from './app.routes';
     IntroComponent,
     PostsComponent,    
     PostListComponent,
-    PostCardComponent,
     PostNavComponent,
+    PostFooterComponent,
     ToArrayPipe,
     ToArrayValuePipe,
+    WebpackEnTusProyectosAngularComponent,
+    SolidCincoPrincipiosBasicosComponent
   ],
   imports: [
     BrowserModule,
