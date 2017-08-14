@@ -1,4 +1,5 @@
 @import './../../styles/__breakpoints.scss';
+@import './../../styles/__colors.scss';
 
 .posts__menu {
     @include respond-to(tablet) { 
@@ -13,7 +14,7 @@
 .posts__footer {
     margin: 3em 0;
     font-size: 18px;
-    color: #770025;
+    color: $bordeaux;
     @include respond-to(movil) { 
       font-size: 14px;
     }

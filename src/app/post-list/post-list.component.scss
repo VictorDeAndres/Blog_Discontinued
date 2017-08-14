@@ -1,4 +1,5 @@
 @import './../../styles/__breakpoints.scss';
+@import './../../styles/__colors.scss';
 
 .posts__resume__header
 {
@@ -90,7 +91,7 @@ a.posts__resume__title--title:hover {
 .posts__resume__publishedate,
 .posts__resume__publisheby,
 {
-    color: #770025;
+    color: $bordeaux;
 }
 
 .posts__resume__category {
@@ -99,7 +100,7 @@ a.posts__resume__title--title:hover {
 }
 
 .posts__resume__category:hover {
-    color: #770025;
+    color: $bordeaux;
     text-decoration: underline;
 }
 
@@ -153,6 +154,6 @@ a.post__resume__categories--separator:hover {
 }
 
 a.posts__resume__link:hover {
-    color: #770025;
+    color: $bordeaux;
     text-decoration: underline;
 }
