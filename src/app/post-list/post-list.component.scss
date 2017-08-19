@@ -19,22 +19,29 @@
     height: 50px;
     background: url('./../../assets/images/star.png') no-repeat 0 3px transparent;
     float: left;
-    @include respond-to(movil) { 
-        width: 12.5%;
-    }
+    @include respond-to(monitor) { 
+        width: 7.5%;
+    }          
     @include respond-to(tablet) { 
         width: 7.5%;
     }      
+    @include respond-to(movil) { 
+        width: 12.5%;
+    }
 }
 
 .posts__resume__title--column{
     display: inline-block;
-    @include respond-to(movil) { 
-        width: 75%;
+    @include respond-to(monitor) { 
+        width: 90%;
     }
     @include respond-to(tablet) { 
         width: 90%;
     }
+    @include respond-to(movil) { 
+        width: 75%;
+    }
+
 }
 
 .posts__resume__title--title{
@@ -42,14 +49,19 @@
     font-weight: bold;    
     text-decoration: none;
     color: #000;
+    @include respond-to(monitor) { 
+        font-size: 70px;
+        line-height: 70px;
+    }
+    @include respond-to(tablet) { 
+        font-size: 70px;
+        line-height: 70px;
+    }
     @include respond-to(movil) { 
         font-size: 36px;
         line-height: 36px;
     }      
-    @include respond-to(tablet) { 
-        font-size: 70px;
-        line-height: 70px;
-    }      
+      
 }
 
 a.posts__resume__title--title:hover {
@@ -62,25 +74,30 @@ a.posts__resume__title--title:hover {
 .posts__resume__title__category,
 {
     color: #757D81;
+    @include respond-to(monitor) { 
+        font-size: 14px;
+    }          
+    @include respond-to(tablet) { 
+        font-size: 14px;
+    }          
     @include respond-to(movil) { 
         font-size: 12px;        
     }      
-    @include respond-to(tablet) { 
-        font-size: 14px;
-    }      
-
 }
 
 .posts__resume__publishedate,
 .posts__resume__publisheby,
 .posts__resume__category
 {
-    @include respond-to(movil) { 
-        font-size: 12px;        
-    }      
+    @include respond-to(monitor) { 
+        font-size: 14px;
+    }
     @include respond-to(tablet) { 
         font-size: 14px;
     }
+    @include respond-to(movil) { 
+        font-size: 12px;        
+    }      
 }
 
 .posts__resume__title__category {
@@ -120,27 +137,34 @@ a.post__resume__categories--separator:hover {
 {
     padding-top: 1em;
     font-family: sans-serif;
+    font-weight: 500;
+    @include respond-to(monitor) { 
+        font-size: 26px;
+        line-height: 36px;   
+    }
+    @include respond-to(tablet) { 
+        font-size: 26px;
+        line-height: 36px;   
+    }        
     @include respond-to(movil) { 
         font-size: 18px;     
         line-height: 24px;   
     }      
-    @include respond-to(tablet) { 
-        font-size: 26px;
-        line-height: 36px;   
-    }    
-
 }
 
 .posts__resume__link
 {
     text-decoration: none;
     color: #7d7c7c;
-    @include respond-to(movil) { 
-        font-size: 12px;        
-    }      
+    @include respond-to(monitor) { 
+        font-size: 14px;
+    }    
     @include respond-to(tablet) { 
         font-size: 14px;
     }    
+    @include respond-to(movil) { 
+        font-size: 12px;        
+    }      
 }
 
 .posts__footer {

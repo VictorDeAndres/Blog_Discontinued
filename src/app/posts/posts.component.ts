@@ -26,7 +26,7 @@ export class PostsComponent implements OnInit {
 
   ngOnInit() {
     // Load background
-    document.body.style.background = "url('./assets/images/struckaxiom.png')";
+    // document.body.style.background = "url('./assets/images/struckaxiom.png')";
 
     this.postsService.getPosts(0)
       .then(responsePromise => {

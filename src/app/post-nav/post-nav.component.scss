@@ -1,25 +1,45 @@
 @import '../../styles/__breakpoints.scss';
 @import './../../styles/__colors.scss';
+@import './../../styles/__measures.scss';
+
+.post_nav__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include respond-to(monitor) { 
+        width: 375px;
+    }    
+    @include respond-to(tablet) { 
+        width: 100%;
+    }
+    @include respond-to(movil) { 
+        width: 100%;
+    }
+
+}
 
 .post_nav__title {
     font-family: Roboto;
     background-color: #000;
     color: white;
-    @include respond-to(movil) { 
-        width: 100%;
+    @include respond-to(monitor) { 
+        width: $nav-width;
         display: block;
         text-align: center;
-        padding: 1em 0.5em 0.3em 0.5em;    
-    }
+        padding: 1em 0 0.3em 0;
+        margin-top: 1em;
+    }    
     @include respond-to(tablet) { 
-        width: 80%;
-        max-width: 250px;
-        max-height: 200px;
+        display: block;
+        text-align: center;
+        padding: 1em 0.5em 0.3em 0.5em;   
+        margin-top: 1em;
+    }
+    @include respond-to(movil) { 
         display: block;
         text-align: center;
         padding: 1em 0.5em 0.3em 0.5em;    
         margin-top: 1em;
-        margin-left: 10%;
     }
 
 }
@@ -27,54 +47,97 @@
 .post_nav__subtitle {
     background-color: #fff;
     color: black;
-    margin-top: -.5em;
-    @include respond-to(movil) { 
+    margin-top: -2.5em;
+    @include respond-to(monitor) { 
+        width: $nav-width;
+        display: block;
+        text-align: center;
+        padding: 0.5em 0 1em 0;
+    }    
+    @include respond-to(tablet) { 
         width: 100%;
         display: block;
         text-align: center;
         padding: 0.5em 0 1em 0;
     }
-    @include respond-to(tablet) { 
-        width: 80%;
-        max-width: 250px;
-        max-height: 100px;           
+    @include respond-to(movil) { 
+        width: 100%;
         display: block;
         text-align: center;
         padding: 0.5em 0 1em 0;
-        margin-left: 10%
-    }
+    }    
 
 }
 
-.post_nav__categories {
-    @include respond-to(movil) {
-        display: none;
-    } 
-    @include respond-to(tablet) { 
+.post_nav__contact a {
+    @include respond-to(monitor) { 
+        text-decoration: none;
         display: block;
-        width: 80%;
+        width: $nav-width;
         text-align: left;
         color: $bordeaux;
         padding: 18px 0 18px 0;
-        margin: 6px 0 12px 10%;
+        margin: 6px 0 12px 0em;
+    }
+    @include respond-to(tablet) { 
+        display: none;
+    }    
+    @include respond-to(movil) {
+        display: none;
+    } 
+    &:before{
+        font-family: FontAwesome;
+        content: "\f003";
+        margin-right: 0.8em;
+    }    
+}
+
+.post_nav__categories {
+    @include respond-to(monitor) { 
+        display: block;
+        width: $nav-width;
+        text-align: left;
+        color: $bordeaux;
+        padding: 18px 0 18px 0;
+        margin: 6px 0 12px 0em;
         border: $bordeaux;
         border-width: 2px;
         border-bottom: solid;
     }    
-}
-
-.post_nav__categories--category {
+    @include respond-to(tablet) { 
+        display: none;    
+    }            
     @include respond-to(movil) {
         display: none;
     } 
-    @include respond-to(tablet) { 
-        display: block;
-        width: 60%;
-        text-align: left;
+
+}
+
+.post_nav__categories#categories:before {
+    font-family: FontAwesome;
+    content: "\f02c";
+    margin-right: 0.8em;
+}
+
+.post_nav__categories#calendar:before {
+    font-family: FontAwesome;
+    content: "\f133";
+    margin-right: 0.8em;
+}
+
+.post_nav__categories--category {
+    @include respond-to(monitor) { 
         padding: 4px 0 4px 8px;
-        margin-left: 20%;
+        margin-left: 1em;
         font-size: 18px;
-    }    
+    }  
+    @include respond-to(tablet) { 
+        display: none;        
+    }  
+    @include respond-to(movil) {
+        display: none;
+    } 
+  
 }
 
 .post_nav__categories--category:hover {

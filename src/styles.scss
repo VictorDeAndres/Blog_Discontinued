@@ -1,4 +1,4 @@
-@import '~bootstrap/scss/bootstrap.scss';
+// @import '~bootstrap/scss/bootstrap.scss';
 @import './styles/__breakpoints.scss';
 
 @font-face {
@@ -34,13 +34,16 @@ body {
 }
 
 body {
-    // background-image: url('./assets/images/struckaxiom.png');  
-    font-family: 'Montserrat', sans-serif;
-    @include respond-to(movil) { 
-        font-size: 16px;
+    @include respond-to(monitor) { 
+        font-size: 24px;        
     }
     @include respond-to(tablet) { 
         font-size: 24px;        
     }   
+    @include respond-to(movil) { 
+        font-size: 16px;
+    }    
+    font-family: 'Montserrat', sans-serif;
+
 }
 
