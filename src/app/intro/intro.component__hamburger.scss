@@ -1,0 +1,76 @@
+@import './../../styles/__colors.scss';
+
+.hamburger-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.hamburger-label {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: block;
+  width: 42px;
+  height: 42px;
+  font: 42px/42px fontawesome;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.hamburger-checkbox:checked ~ .hamburger-label:before {
+  content: '\f00d';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 42px;
+  height: 42px;
+  font: 42px/42px fontawesome;
+  text-align: center;
+  color: #000;
+}
+
+.sidebar {
+  z-index: 10;
+  overflow: hidden;
+  width: 0;
+  // height: 0;
+  background: #fff;
+  color: #000;
+  background-image: url('./../../assets/images/struckaxiom.png');
+  // transition: width .3s;
+  display: flex;
+}
+
+.hamburger-checkbox:checked ~ .sidebar {
+    width: 300px;
+    height: calc(100% - 96px);
+    padding-top: 4em;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  
+  li {
+    display: flex;
+    align-items: center;
+    padding: .5em;    
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $bordeaux;
+      text-decoration: underline;
+    }
+  }
+
+}
+
+

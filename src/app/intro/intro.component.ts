@@ -5,7 +5,7 @@ import { PostsService } from '../services/posts.service';
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.scss'],
+  styleUrls: ['./intro.component.scss','./intro.component__hamburger.scss'],
   providers: []
 
 })
