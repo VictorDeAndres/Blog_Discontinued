@@ -10,6 +10,7 @@ export class PostsService {
   dbcategories: FirebaseListObservable<any>;
   dbarchives: FirebaseListObservable<any>;
 
+  stringTest: string = ''
   posts: Object[] = [];
   categories: Object[] = [];
   archives: Object[] = [];
@@ -17,9 +18,11 @@ export class PostsService {
   PAGEPERLIST: number = 5;
   TOTALNUMBERPAGE: number;
 
+
   constructor(    
     db: AngularFireDatabase
   ){ 
+    console.info('Initializae Init Service');
     this.dbposts = db.list('/posts', { preserveSnapshot: true });
     this.dbcategories = db.list('/categories', { preserveSnapshot: true });
     this.dbarchives = db.list('/archives', { preserveSnapshot: true });
@@ -87,7 +90,6 @@ export class PostsService {
   }
 
   getPosts(getPage: number = 0, filterByCategory: string = null, filterByArchive: string = null) {
-
     var promise = new Promise((resolve, reject) => {
       // Check if posts exits
       if ( this.posts.length === 0 ){

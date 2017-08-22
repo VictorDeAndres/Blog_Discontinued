@@ -1,16 +1,16 @@
 
-
 <!-- Menu -->
+<div [hidden]="!showAnimation()">
+  <input id="hamburger" type="checkbox" class="hamburger-checkbox">
+  <label for="hamburger" class="hamburger-label" role="button" aria-labelledby="menu">&#xf0c9;</label>
 
-<input id="hamburger" type="checkbox" class="hamburger-checkbox">
-<label for="hamburger" class="hamburger-label" role="button" aria-labelledby="menu">&#xf0c9;</label>
-
-<nav role="navigation" class="sidebar">
-  <ul class="menu">
-    <li><a href="/posts">Blog</a></li>
-    <li><a href="/contact">Contacto</a></li>
-  </ul>
-</nav>
+  <nav role="navigation" class="sidebar">
+    <ul class="menu">
+      <li><a [routerLink]="['//posts']">Blog</a></li>
+      <li><a href="/contact">Contacto</a></li>
+    </ul>
+  </nav>
+  </div>
 
 <!-- Background -->
 

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
+import { HttpModule }    from '@angular/http';
 
 import { AppComponent } from './app.component';
 
@@ -50,6 +51,7 @@ import { ThisJavascriptComponent } from './post/this-javascript/this-javascript.
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     Routing,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,

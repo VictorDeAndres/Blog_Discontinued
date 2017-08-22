@@ -21,13 +21,10 @@ export class PostsComponent implements OnInit {
   lastPage: boolean;
 
   constructor(
-    private postsService: PostsService,
+    private postsService: PostsService
   ) { }
 
   ngOnInit() {
-    // Load background
-    // document.body.style.background = "url('./assets/images/struckaxiom.png')";
-
     this.postsService.getPosts(0)
       .then(responsePromise => {
         this.loadAuxData();

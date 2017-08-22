@@ -15,14 +15,14 @@ export class IntroComponent implements OnInit {
 
   constructor(
     private postsService: PostsService
-  ) { 
-  }
+  ) { }
 
   ngOnInit() {
 
     this.postsService.getPosts(0)
       .then(responsePromise => {
         this.showLoading = true;
+        console.info('showLoading');
       },
         () => { console.error('Error carga'); }
       );
