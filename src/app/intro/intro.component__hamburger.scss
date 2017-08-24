@@ -1,4 +1,5 @@
 @import './../../styles/__colors.scss';
+@import './../../styles/__breakpoints.scss';
 
 .hamburger-checkbox {
   position: absolute;
@@ -36,7 +37,6 @@
   z-index: 10;
   overflow: hidden;
   width: 0;
-  // height: 0;
   background: #fff;
   color: #000;
   background-image: url('./../../assets/images/struckaxiom.png');
@@ -46,8 +46,24 @@
 
 .hamburger-checkbox:checked ~ .sidebar {
     width: 300px;
-    height: calc(100% - 96px);
     padding-top: 4em;
+    @include respond-to(monitor) {
+      height: calc(100% - 96px);    
+    }
+    @include respond-to(tablet) {
+      height: calc(100% - 48px);    
+    }
+    @include respond-to(movil) {
+      height: calc(100% - 48px);    
+    }  
+    
+}
+
+.barmenu {
+  display: flex;
+  flex-direction: column;
+  flex-flow: space;
+  justify-content: space-between;
 }
 
 .menu {
@@ -70,7 +86,27 @@
       text-decoration: underline;
     }
   }
-
 }
 
+.footer {
+  display: flex;
+  align-items: center;   
+  padding: 40px;
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  a:hover {
+    color: $bordeaux;
+  }
+
+  &--icon {
+    margin: 2em 0em 1em 0em;
+    padding-top: 2em;
+    padding-left: 1em;
+    padding: .5em
+  }  
+}
 

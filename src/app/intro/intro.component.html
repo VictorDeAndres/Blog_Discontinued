@@ -5,21 +5,28 @@
   <label for="hamburger" class="hamburger-label" role="button" aria-labelledby="menu">&#xf0c9;</label>
 
   <nav role="navigation" class="sidebar">
-    <ul class="menu">
-      <li><a [routerLink]="['//posts']">Blog</a></li>
-      <li><a href="/contact">Contacto</a></li>
-    </ul>
+    <div class="barmenu">
+      <div class="menu">
+        <ul>
+          <li><a [routerLink]="['/posts']">Blog</a></li>
+          <li><a [routerLink]="['/contact']">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer">
+        <a href='ttp://es.linkedin.com/in/vdeandres' class="footer--icon fa fa-linkedin"></a>
+        <a href='https://github.com/VictorDeAndres' class="footer--icon fa fa-github"></a>
+        <a href='https://twitter.com/victor_deandres' class="footer--icon fa fa-twitter"></a>
+      </div>
+    </div>
   </nav>
 </aside>  
 
 <!-- Background -->
-
 <div class="landing__page__container">
-
   <div class="landing__page__container--image">
       <div class="landing__page__card">
       <div class="landing__page__card--name">Victor de Andrés</div>
-      <div class="landing__page__card--title">Frontend Engineering</div>
+      <div class="landing__page__card--title">Frontend Engineer</div>
       <div class="landing__page__card--subtitle">- full stack web developer -</div>
     </div>
   </div>
