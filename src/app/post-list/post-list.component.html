@@ -4,7 +4,7 @@
         <div class="posts__resume__title">
             <div class="posts__resume__title--star"></div>
             <div class="posts__resume__title--column">
-                <a href="/{{post.url}}" class="posts__resume__title--title">{{post.title}}</a>    
+                <a [routerLink]="'/' + post.url" class="posts__resume__title--title">{{post.title}}</a>    
             </div>
         </div>  
         <div>
@@ -15,7 +15,7 @@
             <span class="posts__resume__publishedate">{{post.publisheddate}}</span>
         <div>
             <h6 class="posts__resume__text">{{post.resume}}</h6>
-            <a href="/{{post.url}}" class="posts__resume__link">Leer mas</a>
+            <a [routerLink]="'/' + post.url" class="posts__resume__link">Leer mas</a>
         </div>
         <br>
         <div>

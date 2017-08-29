@@ -22,7 +22,6 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit():void { 
-    console.info('sendContactForm', this.contact); 
     const url = `http://localhost:8080/blogcontact`;
 
     this.http

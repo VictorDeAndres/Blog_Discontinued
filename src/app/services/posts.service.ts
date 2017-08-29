@@ -22,7 +22,6 @@ export class PostsService {
   constructor(    
     db: AngularFireDatabase
   ){ 
-    console.info('Initializae Init Service');
     this.dbposts = db.list('/posts', { preserveSnapshot: true });
     this.dbcategories = db.list('/categories', { preserveSnapshot: true });
     this.dbarchives = db.list('/archives', { preserveSnapshot: true });

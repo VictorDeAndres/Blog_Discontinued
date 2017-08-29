@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
@@ -13,6 +14,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { PostsService } from './services/posts.service';
+import { PostCommentsService } from './services/post-comments.service';
 
 import { IntroComponent } from './intro/intro.component';
 import { PostsComponent } from './posts/posts.component';
@@ -29,6 +31,7 @@ import { WebpackEnTusProyectosAngularComponent } from './post/webpack-en-tus-pro
 import { SolidCincoPrincipiosBasicosComponent } from './post/solid-cinco-principios-basicos/solid-cinco-principios-basicos.component';
 import { MicroFrontendsComponent } from './post/micro-frontends/micro-frontends.component';
 import { ThisJavascriptComponent } from './post/this-javascript/this-javascript.component';
+import { PostCommentComponent } from './post-comment/post-comment.component';
 
 
 
@@ -46,13 +49,15 @@ import { ThisJavascriptComponent } from './post/this-javascript/this-javascript.
     SolidCincoPrincipiosBasicosComponent,
     MicroFrontendsComponent,
     ThisJavascriptComponent,
-    ContactComponent
+    ContactComponent,
+    PostCommentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     Routing,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
   ],
