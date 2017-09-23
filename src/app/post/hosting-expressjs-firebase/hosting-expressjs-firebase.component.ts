@@ -6,8 +6,8 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 import * as hljs from 'highlight.js';
 
 @Component({
-  selector: 'app-hosting-node-firebase',
-  templateUrl: './hosting-node-firebase.component.html',
+  selector: 'app-hosting-expressjs-firebase',
+  templateUrl: './hosting-expressjs-firebase.component.html',
   styleUrls: ['./../post.common.component.scss']
 })
 
@@ -15,11 +15,11 @@ import * as hljs from 'highlight.js';
     selector: 'code[ highlight]' // css selector for the attribute
 })
 
-export class HostingNodeFirebaseComponent implements OnInit {
+export class HostingExpressJsFirebaseComponent implements OnInit {
 
   titlepost: string = 'Hosting de un proyecto ExpressJS en Firebase';
   publishDate: string = '11 de Agosto 2017';
-  postCategories: string[] = ['ExpressJS','Firebase'];
+  postCategories: string[] = ['ExpressJS','Firebase','WebApps'];
   
   dbcomments: FirebaseListObservable<any[]>;
   postComments: object[] = [];
