@@ -45,15 +45,18 @@
 }
 
 .hamburger-checkbox:checked ~ .sidebar {
-    width: 300px;
+
     padding-top: 4em;
     @include respond-to(monitor) {
+      width: 255px;
       height: calc(100% - 96px);    
     }
     @include respond-to(tablet) {
+      width: 255px;
       height: calc(100% - 48px);    
     }
     @include respond-to(movil) {
+      width: 170px;
       height: calc(100% - 48px);    
     }  
     
@@ -82,16 +85,27 @@
     }
 
     a:hover {
-      color: $bordeaux;
-      text-decoration: underline;
+      color: $ink-blog;
+      text-decoration: none;
     }
   }
 }
 
 .footer {
+  @include respond-to(monitor) {
+    padding: 0 0 40px 40px;    
+  }
+  @include respond-to(tablet) {
+    padding: 0 0 40px 40px;
+  }
+  @include respond-to(movil) {
+    padding: 0 0 24px 24px;
+  }  
   display: flex;
-  align-items: center;   
-  padding: 40px;
+
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 
   a {
     text-decoration: none;
@@ -99,10 +113,11 @@
   }
 
   a:hover {
-    color: $bordeaux;
+    color: $ink-blog;
   }
 
   &--icon {
+    display: flex;
     margin: 2em 0em 1em 0em;
     padding-top: 2em;
     padding-left: 1em;

@@ -75,7 +75,7 @@
         display: block;
         width: $nav-width;
         text-align: left;
-        color: $bordeaux;
+        color: $ink-blog;
         padding: 18px 0 18px 0;
         margin: 6px 0 12px 0em;
     }
@@ -97,12 +97,12 @@
         display: block;
         width: $nav-width;
         text-align: left;
-        color: $bordeaux;
+        color: $ink-blog;
         padding: 18px 0 18px 0;
         margin: 6px 0 12px 0em;
-        border: $bordeaux;
-        border-width: 2px;
-        border-bottom: solid;
+        border: $ink-blog;
+        border-width: 0px 0 2px 0;
+        border-style: solid;        
     }    
     @include respond-to(tablet) { 
         display: none;    
@@ -127,7 +127,8 @@
 
 .post_nav__categories--category {
     @include respond-to(monitor) { 
-        padding: 4px 0 4px 8px;
+        width: 237px;
+        padding: 16px 0 8px 8px;
         margin-left: 1em;
         font-size: 18px;
     }  
@@ -141,6 +142,9 @@
 }
 
 .post_nav__categories--category:hover {
-    color: $bordeaux;
-    text-decoration: underline;
+    display: block;
+    padding: 8px 16px;
+    background-color: $ink-blog;
+    color: #fff;
+    border-radius: 8px;
 }

@@ -17,6 +17,16 @@
 
 .landing__page__container{
 
+  @include respond-to(monitor) {
+    background-image: url('./../../assets/images/cover_m.jpg');
+  }
+  @include respond-to(tablet) {
+    background-image: url('./../../assets/images/cover.jpg');
+  }
+  @include respond-to(movil) {
+    background-image: url('./../../assets/images/cover.jpg');
+  }    
+
   width: 100%;
   height: 100%;
 
@@ -28,7 +38,8 @@
   display: flex;
   
   justify-content: center;
-  background-image: url('./../../assets/images/cover.jpg');
+
+
   background-size: cover;
 
   &--image{
@@ -48,6 +59,9 @@
   color: #fff;
   background-color: rgba(32, 32, 32, 0.2);
   text-align: center;
+  @include respond-to(monitor) {
+    margin-top: -34%;
+  }
 
   &--name{
     @include respond-to(monitor) {
@@ -65,13 +79,13 @@
 
   &--title{
     @include respond-to(monitor) {
-      font-size: 4.1em;
+      font-size: 3em;
     }
     @include respond-to(tablet) {
-      font-size: 3.5em; 
+      font-size: 2.5em; 
     }
     @include respond-to(movil) {
-      font-size: 2.6em; 
+      font-size: 1.8em; 
     }
     font-family: nevis; 
     font-weight: 500;
@@ -80,406 +94,15 @@
 
   &--subtitle{
     @include respond-to(monitor) {
-      font-size: 3em;  
+      font-size: 2.7em;  
     }
     @include respond-to(tablet) {
-      font-size: 2.5em;
+      font-size: 2.2em;
     }
     @include respond-to(movil) {
-      font-size: 1.9em;
+      font-size: 1.5em;
     }    
     
   }
 }
 
-// CSS Loader Animation 
-// .landing__page{
-//   height: 100%;
-//   width: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   background: linear-gradient(to bottom right, #4E4E4E, $bordeaux);  
-// }  
-
-
-// .loader {
- 
-//   position: relative;
-//   height: 100px;
-  
-//   &__bar {
-//     position: absolute;
-//     bottom: 0;
-//     width: 10px;
-//     height: 50%;
-//     background: #cecece;
-//     transform-origin: center bottom;
-//     box-shadow: 1px 1px 0 rgba(0,0,0,.2);
-    
-//     @for $i from 1 through 5 { 
-//        &:nth-child(#{$i}) {
-//          left: ($i - 1) * 15px;
-//          transform: scale(1,$i*.2);
-//          animation: barUp#{$i} 4s infinite;
-//         }
-//     }
-    
-//   }
-  
-//   &__ball {
-//     position: absolute;
-//     bottom: 10px;
-//     left: 0;
-//     width: 10px;
-//     height: 10px;
-//     background: #cecece;
-//     border-radius: 50%;
-//     animation: ball 4s infinite;
-//   }
-
-//   &__message {
-//     font-size: 18px;
-//     color: #cecece;
-//     padding-top: 105px;
-//   }  
-// }
-
-// @keyframes ball {
-//   0% {
-//     transform: translate(0, 0);
-//   }
-//   5% {
-//     transform: translate(8px, -14px);
-//   }
-//   10% {
-//     transform: translate(15px, -10px)
-//   }
-//   17% {
-//     transform: translate(23px, -24px)
-//   }
-//   20% {
-//     transform: translate(30px, -20px)
-//   }
-//   27% {
-//     transform: translate(38px, -34px)
-//   }
-//   30% {
-//     transform: translate(45px, -30px)
-//   }
-//   37% {
-//     transform: translate(53px, -44px)
-//   }
-//   40% {
-//     transform: translate(60px, -40px)
-//   }
-//   50% {
-//     transform: translate(60px, 0)
-//   }
-//   57% {
-//     transform: translate(53px, -14px)
-//   }
-//   60% {
-//     transform: translate(45px, -10px)
-//   }
-//   67% {
-//     transform: translate(37px, -24px)
-//   }
-//   70% {
-//     transform: translate(30px, -20px)
-//   }
-//   77% {
-//     transform: translate(22px, -34px)
-//   }
-//   80% {
-//     transform: translate(15px, -30px)
-//   }
-//   87% {
-//     transform: translate(7px, -44px)
-//   }
-//   90% {
-//     transform: translate(0, -40px)
-//   }
-//   100% {
-//     transform: translate(0, 0);
-//   }
-// }
-
-// @keyframes barUp1 { 
-//   0% {
-//     transform: scale(1, .2);
-//   }
-//   40%{
-//     transform: scale(1, .2);
-//   }
-//   50% {
-//     transform: scale(1, 1);
-//   }
-//   90% {
-//     transform: scale(1,1);
-//   }
-//   100% {
-//     transform: scale(1,.2);
-//   }
-// }
-// @keyframes barUp2 { 
-//   0% {
-//     transform: scale(1, .4);
-//   }
-//   40% {
-//     transform: scale(1, .4);
-//   }
-//   50% {
-//     transform: scale(1, .8);
-//   }
-//   90% {
-//     transform: scale(1, .8);
-//   }
-//   100% {
-//     transform: scale(1, .4);
-//   }
-// }
-// @keyframes barUp3 { 
-//   0% {
-//     transform: scale(1, .6);
-//   }
-//   100% {
-//     transform: scale(1, .6);
-//   }
-// }
-// @keyframes barUp4 { 
-//   0% {
-//     transform: scale(1, .8);
-//   }
-//   40% {
-//     transform: scale(1, .8);
-//   }
-//   50% {
-//     transform: scale(1, .4);
-//   }
-//   90% {
-//     transform: scale(1, .4);
-//   }
-//   100% {
-//     transform: scale(1, .8);
-//   }
-// }
-// @keyframes barUp5 { 
-//   0% {
-//     transform: scale(1, 1);
-//   }
-//   40% {
-//     transform: scale(1, 1);
-//   }
-//   50% {
-//     transform: scale(1, .2);
-//   }
-//   90% {
-//     transform: scale(1, .2);
-//   }
-//   100% {
-//     transform: scale(1, 1);
-//   }
-// }
-
-// // Title style
-// //  
-// h1 {
-//   color:#fff;
-//   font-family: Montserrat, sans-serif;
-//   font-size: 2em;
-//   left: 50%;
-//   line-height: 1.2;
-//   position: absolute;
-//   text-shadow: 0 1px 0 #c0c0c0, 0 2px 0 #b0b0b0, 0 3px 10px rgba(0,0,0,.6);
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   -webkit-transform: translate(-50%, -50%);
-// }
-
-// @media only screen and (min-width: 480px) {
-//   h1 {
-//     font-size: 2.75em;
-//   }
-// }
-
-// @media only screen and (min-width: 768px) {
-//   h1 {
-//     font-size: 4em;
-//   }
-// }
-
-// a.blog {
-//   color: #fff;
-//   font-family: Montserrat, sans-serif;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   margin-top: 12px;
-//   margin-right: 24px;
-//   font-weight: lighter;
-//   text-decoration: none;
-//   border: solid #fff;
-//   padding: 10px;
-// }
-
-// @media only screen and (min-width: 320px) {
-//   a.blog {
-//     font-size: 18px;
-//   }
-// }
-
-// @media only screen and (min-width: 768px) {
-//   a.blog {
-//     font-size: 24px;
-//   }
-// }
-
-// a.blog:hover{
-//   text-decoration: underline;
-// }
-
-
-// a
-// {
-//   text-decoration: none;
-//   color: #232323;
-  
-//   transition: color 0.3s ease;
-// }
-
-// a:hover
-// {
-//   color: tomato;
-// }
-
-// #menuToggle
-// {
-//   display: block;
-//   position: absolute;
-//   top: 24px;
-//   right: 24px;
-//   z-index: 1;
-  
-//   z-index: 1;
-  
-//   -webkit-user-select: none;
-//   user-select: none;
-// }
-
-// #menuToggle input
-// {
-//   display: block;
-//   width: 40px;
-//   height: 32px;
-//   position: absolute;
-//   top: -7px;
-//   left: -5px;
-  
-//   cursor: pointer;
-  
-//   opacity: 0; /* hide this */
-//   z-index: 2; /* and place it over the hamburger */
-  
-//   -webkit-touch-callout: none;
-// }
-
-// /*
-//  * Just a quick hamburger
-//  */
-// #menuToggle span
-// {
-//   display: block;
-//   width: 33px;
-//   height: 4px;
-//   margin-bottom: 5px;
-//   position: relative;
-  
-//   background: #cdcdcd;
-//   border-radius: 3px;
-  
-//   z-index: 1;
-  
-//   transform-origin: 4px 0px;
-  
-//   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-//               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-//               opacity 0.55s ease;
-// }
-
-// #menuToggle span:first-child
-// {
-//   transform-origin: 0% 0%;
-// }
-
-// #menuToggle span:nth-last-child(2)
-// {
-//   transform-origin: 0% 100%;
-// }
-
-
-//  * Transform all the slices of hamburger
-//  * into a crossmark.
-
-// #menuToggle input:checked ~ span
-// {
-//   opacity: 1;
-//   transform: rotate(45deg) translate(-2px, -1px);
-//   background: #232323;
-// }
-
-// /*
-//  * But let's hide the middle one.
-//  */
-// #menuToggle input:checked ~ span:nth-last-child(3)
-// {
-//   opacity: 0;
-//   transform: rotate(0deg) scale(0.2, 0.2);
-// }
-
-// /*
-//  * Ohyeah and the last one should go the other direction
-//  */
-// #menuToggle input:checked ~ span:nth-last-child(2)
-// {
-//   opacity: 1;
-//   transform: rotate(-45deg) translate(0, -1px);
-// }
-
-// /*
-//  * Make this absolute positioned
-//  * at the top left of the screen
-//  */
-// #menu
-// {
-//   position: absolute;
-//   width: 300px;
-//   margin: -100px 0 0 -50px;
-//   padding: 50px;
-//   padding-top: 125px;
-  
-//   background: #ededed;
-//   list-style-type: none;
-//   -webkit-font-smoothing: antialiased;
-//   /* to stop flickering of text in safari */
-  
-//   transform-origin: 0% 0%;
-//   transform: translate(-100%, 0);
-  
-//   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-// }
-
-// #menu li
-// {
-//   padding: 10px 0;
-//   font-size: 22px;
-// }
-
-// /*
-//  * And let's fade it in from the left
-//  */
-// #menuToggle input:checked ~ ul
-// {
-//   transform: scale(1.0, 1.0);
-//   opacity: 1;
-// }

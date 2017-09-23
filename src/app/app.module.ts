@@ -14,7 +14,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { PostsService } from './services/posts.service';
-import { PostCommentsService } from './services/post-comments.service';
 
 import { IntroComponent } from './intro/intro.component';
 import { PostsComponent } from './posts/posts.component';
@@ -28,12 +27,16 @@ import { ToArrayValuePipe } from './pipes/to-array-value.pipe';
 
 import { Routing } from './app.routes';
 import { WebpackEnTusProyectosAngularComponent } from './post/webpack-en-tus-proyectos-angular/webpack-en-tus-proyectos-angular.component';
-import { SolidCincoPrincipiosBasicosComponent } from './post/solid-cinco-principios-basicos/solid-cinco-principios-basicos.component';
+// import { SolidCincoPrincipiosBasicosComponent } from './post/solid-cinco-principios-basicos/solid-cinco-principios-basicos.component';
 import { MicroFrontendsComponent } from './post/micro-frontends/micro-frontends.component';
-import { ThisJavascriptComponent } from './post/this-javascript/this-javascript.component';
+// import { ThisJavascriptComponent } from './post/this-javascript/this-javascript.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
+import { PostPublishInfoComponent } from './post-publish-info/post-publish-info.component';
+import { HostingNodeFirebaseComponent } from './post/hosting-node-firebase/hosting-node-firebase.component';
 
-
+export function highlightJsFactory() {
+  return hljs;
+}
 
 @NgModule({
   declarations: [
@@ -46,12 +49,15 @@ import { PostCommentComponent } from './post-comment/post-comment.component';
     ToArrayPipe,
     ToArrayValuePipe,
     WebpackEnTusProyectosAngularComponent,
-    SolidCincoPrincipiosBasicosComponent,
+    // SolidCincoPrincipiosBasicosComponent,
     MicroFrontendsComponent,
-    ThisJavascriptComponent,
+    // ThisJavascriptComponent,
     ContactComponent,
-    PostCommentComponent
+    PostCommentComponent,
+    PostPublishInfoComponent,
+    HostingNodeFirebaseComponent
   ],
+
   imports: [
     BrowserModule,
     FormsModule,
@@ -61,8 +67,14 @@ import { PostCommentComponent } from './post-comment/post-comment.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
   ],
-  providers: [PostsService],
-  bootstrap: [AppComponent]
+
+  providers: [
+    PostsService
+  ],
+
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
 

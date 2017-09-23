@@ -210,7 +210,7 @@
     border: none;
     background-color: transparent;
     border-bottom-style: solid;
-    border-bottom-color: $bordeaux;
+    border-bottom-color: $ink-blog;
     border-bottom-width: 1px;  
     padding-top: 0.25em; 
     padding-bottom: 0.25em;
@@ -269,8 +269,8 @@
   }  
 
   &--enabled {
-    color: $bordeaux;
-    border-color: $bordeaux;    
+    color: $ink-blog;
+    border-color: $ink-blog;    
   }
   &--disabled {
     color: #cecece;

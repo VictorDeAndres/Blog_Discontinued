@@ -53,7 +53,7 @@ export class PostCommentComponent implements OnInit {
       comment: this.comment.message
     };
 
-    const url = `http://localhost:8080/addcomment`;
+    const url = `https://backend.victordeandres.es/addcomment`;
 
     if ( newComment.name && newComment.comment){
       this.http

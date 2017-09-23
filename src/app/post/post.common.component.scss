@@ -100,16 +100,9 @@
     width: 100%;
     height: 2px;
     background-color: #cecece;
-    @include respond-to(monitor) { 
-      margin: 1em 0 1em 0;    
-    }        
-    @include respond-to(tablet) { 
-      margin: 1em 0 1em 0;    
-    }                
-    @include respond-to(movil) { 
-      margin: 1em 0 1em 0;    
-    }      
+    margin: 1em 0 .1em 0;  
 }
+
 
 .post__image{
   display: block;

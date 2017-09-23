@@ -2,22 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import {Directive, ElementRef, AfterViewInit} from '@angular/core';
 
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
-import {PostPublishInfoComponent} from '../../post-publish-info/post-publish-info.component';
 
 import * as hljs from 'highlight.js';
 
 @Component({
-  selector: 'app-webpack-en-tus-proyectos-angular',
-  templateUrl: './webpack-en-tus-proyectos-angular.component.html',
+  selector: 'app-hosting-node-firebase',
+  templateUrl: './hosting-node-firebase.component.html',
   styleUrls: ['./../post.common.component.scss']
 })
 
-export class WebpackEnTusProyectosAngularComponent implements OnInit {
+@Directive({
+    selector: 'code[ highlight]' // css selector for the attribute
+})
 
-  titlepost: string = 'Webpack en tus proyectos Angular';
-  publishDate: string = '08 de Julio 2017';
-  postCategories: string[] = ['Angular', 'Webpack'];
+export class HostingNodeFirebaseComponent implements OnInit {
 
+  titlepost: string = 'Hosting de un proyecto ExpressJS en Firebase';
+  publishDate: string = '11 de Agosto 2017';
+  postCategories: string[] = ['ExpressJS','Firebase'];
+  
   dbcomments: FirebaseListObservable<any[]>;
   postComments: object[] = [];
 
@@ -33,5 +36,4 @@ export class WebpackEnTusProyectosAngularComponent implements OnInit {
   ngAfterViewInit() {
     this.eltRef.nativeElement.querySelectorAll('pre code').forEach(code => hljs.highlightBlock(code) );
   }
-
 }

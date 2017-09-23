@@ -22,7 +22,6 @@ export class IntroComponent implements OnInit {
     this.postsService.getPosts(0)
       .then(responsePromise => {
         this.showLoading = true;
-        console.info('showLoading');
       },
         () => { console.error('Error carga'); }
       );
