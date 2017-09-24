@@ -33,6 +33,7 @@ import { MicroFrontendsComponent } from './post/micro-frontends/micro-frontends.
 import { PostCommentComponent } from './post-comment/post-comment.component';
 import { PostPublishInfoComponent } from './post-publish-info/post-publish-info.component';
 import { HostingExpressJsFirebaseComponent } from './post/hosting-expressjs-firebase/hosting-expressjs-firebase.component';
+import { TopAngularRouterNavigationComponent } from './post/top-angular-router-navigation/top-angular-router-navigation.component';
 
 export function highlightJsFactory() {
   return hljs;
@@ -55,7 +56,8 @@ export function highlightJsFactory() {
     ContactComponent,
     PostCommentComponent,
     PostPublishInfoComponent,
-    HostingExpressJsFirebaseComponent
+    HostingExpressJsFirebaseComponent,
+    TopAngularRouterNavigationComponent
   ],
 
   imports: [

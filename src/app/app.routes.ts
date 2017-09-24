@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { WebpackEnTusProyectosAngularComponent } from './post/webpack-en-tus-proyectos-angular/webpack-en-tus-proyectos-angular.component';
 import { MicroFrontendsComponent } from './post/micro-frontends/micro-frontends.component';
 import { HostingExpressJsFirebaseComponent } from './post/hosting-expressjs-firebase/hosting-expressjs-firebase.component';
+import { TopAngularRouterNavigationComponent } from './post/top-angular-router-navigation/top-angular-router-navigation.component';
 // import { SolidCincoPrincipiosBasicosComponent } from './post/solid-cinco-principios-basicos/solid-cinco-principios-basicos.component';
 // import { ThisJavascriptComponent } from './post/this-javascript/this-javascript.component';
 
@@ -34,6 +35,9 @@ export const routes: Routes = [
   {
     path: 'post/hosting-expressjs-firebase', component: HostingExpressJsFirebaseComponent
   },  
+  {
+    path: 'post/top-angular-router-navigation', component: TopAngularRouterNavigationComponent
+  },    
   // {
   //   path: 'post/solid-cinco-principios-basicos', component: SolidCincoPrincipiosBasicosComponent
   // },  
