@@ -9,6 +9,7 @@ import { WebpackEnTusProyectosAngularComponent } from './post/webpack-en-tus-pro
 import { MicroFrontendsComponent } from './post/micro-frontends/micro-frontends.component';
 import { HostingExpressJsFirebaseComponent } from './post/hosting-expressjs-firebase/hosting-expressjs-firebase.component';
 import { TopAngularRouterNavigationComponent } from './post/top-angular-router-navigation/top-angular-router-navigation.component';
+import { IntroduccionGraphqlComponent } from './post/introduccion-graphql/introduccion-graphql.component';
 // import { SolidCincoPrincipiosBasicosComponent } from './post/solid-cinco-principios-basicos/solid-cinco-principios-basicos.component';
 // import { ThisJavascriptComponent } from './post/this-javascript/this-javascript.component';
 
@@ -37,7 +38,10 @@ export const routes: Routes = [
   },  
   {
     path: 'post/top-angular-router-navigation', component: TopAngularRouterNavigationComponent
-  },    
+  },
+  {
+    path: 'post/introduccion-graphql', component: IntroduccionGraphqlComponent
+  },      
   // {
   //   path: 'post/solid-cinco-principios-basicos', component: SolidCincoPrincipiosBasicosComponent
   // },  

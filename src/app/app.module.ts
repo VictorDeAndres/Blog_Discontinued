@@ -27,13 +27,12 @@ import { ToArrayValuePipe } from './pipes/to-array-value.pipe';
 
 import { Routing } from './app.routes';
 import { WebpackEnTusProyectosAngularComponent } from './post/webpack-en-tus-proyectos-angular/webpack-en-tus-proyectos-angular.component';
-// import { SolidCincoPrincipiosBasicosComponent } from './post/solid-cinco-principios-basicos/solid-cinco-principios-basicos.component';
 import { MicroFrontendsComponent } from './post/micro-frontends/micro-frontends.component';
-// import { ThisJavascriptComponent } from './post/this-javascript/this-javascript.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
 import { PostPublishInfoComponent } from './post-publish-info/post-publish-info.component';
 import { HostingExpressJsFirebaseComponent } from './post/hosting-expressjs-firebase/hosting-expressjs-firebase.component';
 import { TopAngularRouterNavigationComponent } from './post/top-angular-router-navigation/top-angular-router-navigation.component';
+import { IntroduccionGraphqlComponent } from './post/introduccion-graphql/introduccion-graphql.component';
 
 export function highlightJsFactory() {
   return hljs;
@@ -57,7 +56,8 @@ export function highlightJsFactory() {
     PostCommentComponent,
     PostPublishInfoComponent,
     HostingExpressJsFirebaseComponent,
-    TopAngularRouterNavigationComponent
+    TopAngularRouterNavigationComponent,
+    IntroduccionGraphqlComponent
   ],
 
   imports: [
