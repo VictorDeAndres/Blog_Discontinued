@@ -1,17 +1,17 @@
 <div class="posts__container">
   <nav class="posts__container__nav">
-    <post-nav class="posts__menu" 
+    <app-post-nav class="posts__menu" 
     [categories]="categories" 
     [archives]="archives"
     (category)="selectByCategory($event)"
-    (archived)="selectByArchive($event)"></post-nav>
+    (archived)="selectByArchive($event)"></app-post-nav>
   </nav>
 
   <div class="posts__container__list">
     <section class="posts__container__list--post">
-      <post-list 
+      <app-post-list 
       [posts]="posts"
-      (category)="selectByCategory($event)"></post-list>
+      (category)="selectByCategory($event)"></app-post-list>
     </section>
     <section class="posts__container__list--footer">
       <span 

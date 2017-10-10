@@ -9,7 +9,7 @@
     </h2>  
     <div class="post__title--footer"></div> 
     
-    <post-publish-info [publishDate]="publishDate" [postCategories]="postCategories"></post-publish-info>
+    <app-post-publish-info [publishDate]="publishDate" [postCategories]="postCategories"></app-post-publish-info>
 
     <div class="post__image">
       <img class="post__image--image" src="./../assets/images/posts/angulartips.png" alt="angular tips">
@@ -74,8 +74,8 @@
 
     <p class="post__paragraph">Una recomendación, no utilices está funcionalidad para aplicar la seguridad en tu aplicación. Para ello debes utilizar las <span class="post__paragraph--font-weight">guards</span>. Si quieres puedes leer el siguiente artículo <a href="https://blog.thoughtram.io/angular/2016/07/18/guards-in-angular-2.html" title="protecting routes using guards in angular">"Protecting routes using guards in angular"</a> escrito por @PascalPrecht de Thoughtram donde podrás saber más sobre las guards de Angular.</p>
 
-    <post-footer [titlepost]="titlepost"></post-footer>
+    <app-post-footer [titlepost]="titlepost"></app-post-footer>
   </div>
 </article>
-<post-comment [idpost]="titlepost" [postComments]="dbcomments"></post-comment>
+<!-- <post-comment [idpost]="titlepost" [postComments]="dbcomments"></post-comment> -->
 

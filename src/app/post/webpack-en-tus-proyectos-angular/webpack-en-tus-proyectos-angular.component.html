@@ -9,7 +9,7 @@
     </h2>  
     <div class="post__title--footer"></div> 
 
-    <post-publish-info [publishDate]="publishDate" [postCategories]="postCategories"></post-publish-info>
+    <app-post-publish-info [publishDate]="publishDate" [postCategories]="postCategories"></app-post-publish-info>
 
     <div class="post__image">
       <img class="post__image--image" src="./../assets/images/posts/webpack-and-angularjs.png" alt="Angular y webpack">
@@ -57,7 +57,7 @@
 
     <p class="post__paragraph">En tu proyecto encontrarás el archivo que buscabas: webpack.config.js ya puedes agregar los complomentos que más te gusten y trabajar con webpack.</p>
     
-    <post-footer [titlepost]="titlepost"></post-footer>
+    <app-post-footer [titlepost]="titlepost"></app-post-footer>
   </div>
 </article>
-<post-comment [idpost]="titlepost" [postComments]="dbcomments"></post-comment>
+<!-- <post-comment [idpost]="titlepost" [postComments]="dbcomments"></post-comment> -->

@@ -1,14 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
-import { HttpModule }    from '@angular/http';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
 
-import { RouterModule }   from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -26,35 +26,35 @@ import { ToArrayPipe } from './pipes/to-array-key.pipe';
 import { ToArrayValuePipe } from './pipes/to-array-value.pipe';
 
 import { Routing } from './app.routes';
-import { WebpackEnTusProyectosAngularComponent } from './post/webpack-en-tus-proyectos-angular/webpack-en-tus-proyectos-angular.component';
-import { MicroFrontendsComponent } from './post/micro-frontends/micro-frontends.component';
+
 import { PostCommentComponent } from './post-comment/post-comment.component';
 import { PostPublishInfoComponent } from './post-publish-info/post-publish-info.component';
+
+import { WebpackEnTusProyectosAngularComponent } from './post/webpack-en-tus-proyectos-angular/webpack-en-tus-proyectos-angular.component';
+import { MicroFrontendsComponent } from './post/micro-frontends/micro-frontends.component';
 import { HostingExpressJsFirebaseComponent } from './post/hosting-expressjs-firebase/hosting-expressjs-firebase.component';
 import { TopAngularRouterNavigationComponent } from './post/top-angular-router-navigation/top-angular-router-navigation.component';
 import { IntroduccionGraphqlComponent } from './post/introduccion-graphql/introduccion-graphql.component';
 
-export function highlightJsFactory() {
-  return hljs;
-}
+// export function highlightJsFactory() {
+//   // return hljs;
+// }
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
-    PostsComponent,    
+    PostsComponent,
     PostListComponent,
     PostNavComponent,
     PostFooterComponent,
     ToArrayPipe,
     ToArrayValuePipe,
-    WebpackEnTusProyectosAngularComponent,
-    // SolidCincoPrincipiosBasicosComponent,
-    MicroFrontendsComponent,
-    // ThisJavascriptComponent,
     ContactComponent,
-    PostCommentComponent,
     PostPublishInfoComponent,
+    PostCommentComponent,
+    WebpackEnTusProyectosAngularComponent,
+    MicroFrontendsComponent,
     HostingExpressJsFirebaseComponent,
     TopAngularRouterNavigationComponent,
     IntroduccionGraphqlComponent

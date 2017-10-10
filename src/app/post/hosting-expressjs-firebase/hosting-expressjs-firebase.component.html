@@ -9,7 +9,7 @@
     </h2>  
     <div class="post__title--footer"></div> 
     
-    <post-publish-info [publishDate]="publishDate" [postCategories]="postCategories"></post-publish-info>
+    <app-post-publish-info [publishDate]="publishDate" [postCategories]="postCategories"></app-post-publish-info>
 
     <div class="post__image">
       <img class="post__image--image" src="./../assets/images/posts/firebase_express.png" alt="firebase express">
@@ -130,9 +130,9 @@
 
     <p>Una vez finalizado el despliegue ya tendrás disponible tu página web dinámica gracias a la funcionalidad de las Cloud Functions de Firebase.</p>
 
-    <post-footer [titlepost]="titlepost"></post-footer>
+    <app-post-footer [titlepost]="titlepost"></app-post-footer>
   </div>
 </article>
-<post-comment [idpost]="titlepost" [postComments]="dbcomments"></post-comment>
+<!-- <post-comment [idpost]="titlepost" [postComments]="dbcomments"></post-comment> -->
 
 

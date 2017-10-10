@@ -5,7 +5,9 @@ import { PostsService } from '../services/posts.service';
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.scss','./intro.component__hamburger.scss'],
+  styleUrls: ['./intro.component.scss',
+    './intro.component__hamburger.scss'
+  ],
   providers: []
 
 })
@@ -18,7 +20,6 @@ export class IntroComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     this.postsService.getPosts(0)
       .then(responsePromise => {
         this.showLoading = true;

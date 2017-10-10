@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { PostsService } from '../services/posts.service';
 
 @Component({
-  selector: 'post-list',
+  selector: 'app-post-list',
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.scss'],
   providers: []
@@ -11,8 +11,8 @@ import { PostsService } from '../services/posts.service';
 
 export class PostListComponent {
 
-  @Input() 
-    posts : Array<any>
+  @Input()
+    posts: Array<any>
   @Output()
     category: EventEmitter<string> = new EventEmitter<string>();
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Directive, ElementRef, AfterViewInit} from '@angular/core';
 
-import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+// import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import {PostPublishInfoComponent} from '../../post-publish-info/post-publish-info.component';
 
 import * as hljs from 'highlight.js';
@@ -11,20 +11,20 @@ import * as hljs from 'highlight.js';
   templateUrl: './top-angular-router-navigation.component.html',
   styleUrls: ['./../post.common.component.scss']
 })
-export class TopAngularRouterNavigationComponent implements OnInit {
+export class TopAngularRouterNavigationComponent implements OnInit, AfterViewInit {
 
-  titlepost: string = 'Posiciona vista al inicio nueva pagina Angular';
-  publishDate: string = '26 de Agosto 2017';
+  titlepost = 'Posiciona vista al inicio nueva pagina Angular';
+  publishDate = '26 de Agosto 2017';
   postCategories: string[] = ['Angular', 'Tips'];
 
-  dbcomments: FirebaseListObservable<any[]>;
+//   dbcomments: FirebaseListObservable<any[]>;
   postComments: object[] = [];
 
   constructor(
-    private db: AngularFireDatabase,
-    private eltRef:ElementRef,
-  ){ 
-    this.dbcomments = db.list(`${this.titlepost}`);
+    // private db: AngularFireDatabase,
+    private eltRef: ElementRef,
+  ) {
+    // this.dbcomments = db.list(`${this.titlepost}`);
   }
 
   ngOnInit() { }

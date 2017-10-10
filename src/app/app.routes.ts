@@ -1,4 +1,4 @@
-import { ModuleWithProviders }  from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IntroComponent } from './intro/intro.component';
@@ -10,8 +10,6 @@ import { MicroFrontendsComponent } from './post/micro-frontends/micro-frontends.
 import { HostingExpressJsFirebaseComponent } from './post/hosting-expressjs-firebase/hosting-expressjs-firebase.component';
 import { TopAngularRouterNavigationComponent } from './post/top-angular-router-navigation/top-angular-router-navigation.component';
 import { IntroduccionGraphqlComponent } from './post/introduccion-graphql/introduccion-graphql.component';
-// import { SolidCincoPrincipiosBasicosComponent } from './post/solid-cinco-principios-basicos/solid-cinco-principios-basicos.component';
-// import { ThisJavascriptComponent } from './post/this-javascript/this-javascript.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -20,13 +18,13 @@ export const routes: Routes = [
   },
   {
     path: 'index', component: IntroComponent
-  },      
+  },
   {
     path: 'posts', component: PostsComponent
   },
   {
     path: 'contact', component: ContactComponent
-  },      
+  },
   {
     path: 'post/webpack-en-tus-proyectos-angular', component: WebpackEnTusProyectosAngularComponent
   },
@@ -35,19 +33,13 @@ export const routes: Routes = [
   },
   {
     path: 'post/hosting-expressjs-firebase', component: HostingExpressJsFirebaseComponent
-  },  
+  },
   {
     path: 'post/top-angular-router-navigation', component: TopAngularRouterNavigationComponent
   },
   {
     path: 'post/introduccion-graphql', component: IntroduccionGraphqlComponent
-  },      
-  // {
-  //   path: 'post/solid-cinco-principios-basicos', component: SolidCincoPrincipiosBasicosComponent
-  // },  
-  // {
-  //   path: 'post/this-javascript', component: ThisJavascriptComponent
-  // } 
+  },
 ];
 
 export const Routing: ModuleWithProviders = RouterModule.forRoot(routes);

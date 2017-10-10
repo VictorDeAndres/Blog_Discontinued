@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+// import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 @Component({
   selector: 'app-micro-frontends',
@@ -9,17 +9,17 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 
 export class MicroFrontendsComponent implements OnInit {
 
-  titlepost: string = 'Micro FrontEnds';
-  publishDate: string = '24 de Julio 2017';
+  titlepost = 'Micro FrontEnds';
+  publishDate = '24 de Julio 2017';
   postCategories: string[] = ['WebApps'];
-  
-  dbcomments: FirebaseListObservable<any[]>;
+
+//   dbcomments: FirebaseListObservable<any[]>;
   postComments: object[] = [];
 
   constructor(
-    db: AngularFireDatabase
-  ){ 
-    this.dbcomments = db.list(`${this.titlepost}`);
+    // db: AngularFireDatabase
+  ) {
+    // this.dbcomments = db.list(`${this.titlepost}`);
   }
 
   ngOnInit() { }

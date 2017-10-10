@@ -1,16 +1,16 @@
-import { Component, Input,Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'post-nav',
+  selector: 'app-post-nav',
   templateUrl: './post-nav.component.html',
   styleUrls: ['./post-nav.component.scss'],
   providers: []
 })
 export class PostNavComponent {
 
-  @Input() 
+  @Input()
     categories: object[];
-  @Input() 
+  @Input()
     archives: object[];
   @Output()
     category: EventEmitter<string> = new EventEmitter<string>();

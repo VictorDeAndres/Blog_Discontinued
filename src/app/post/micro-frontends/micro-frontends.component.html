@@ -9,7 +9,7 @@
     </h2>  
     <div class="post__title--footer"></div> 
     
-    <post-publish-info [publishDate]="publishDate" [postCategories]="postCategories"></post-publish-info>
+    <app-post-publish-info [publishDate]="publishDate" [postCategories]="postCategories"></app-post-publish-info>
 
     <div class="post__image">
       <img class="post__image--image" src="./../assets/images/posts/microfrontend.png" alt="micro frontends">
@@ -51,8 +51,8 @@
         <li>Y finalmente hacer los que los diferentes modulos se comuniquen a través de un bus de eventos compartidos, por ejemplo <a href="https://github.com/chrisdavies/eev" title="eev">"Eev"</a> de chrisdavies.</li>
       </ol>
 
-    <post-footer [titlepost]="titlepost"></post-footer>
+    <app-post-footer [titlepost]="titlepost"></app-post-footer>
   </div>
 </article>
-<post-comment [idpost]="titlepost" [postComments]="dbcomments"></post-comment>
+<!-- <post-comment [idpost]="titlepost" [postComments]="dbcomments"></post-comment> -->
   
