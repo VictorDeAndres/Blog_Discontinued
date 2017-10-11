@@ -20,6 +20,7 @@ export class IntroComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.postsService.testMongoDB();
     this.postsService.getPosts(0)
       .then(responsePromise => {
         this.showLoading = true;
