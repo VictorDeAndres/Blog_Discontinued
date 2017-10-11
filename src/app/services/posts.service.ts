@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 
-import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
+// import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
+import { HttpClient } from '@angular/common/http';
 
 import * as _ from 'lodash';
 
 @Injectable()
 export class PostsService {
 
-  dbposts: AngularFireObject<any>;
-  dbcategories: AngularFireObject<any>;
-  dbarchives: AngularFireObject<any>;
+  // dbposts: AngularFireObject<any>;
+  // dbcategories: AngularFireObject<any>;
+  // dbarchives: AngularFireObject<any>;
 
   stringTest = ''
   posts: Object[] = [];
@@ -18,40 +19,86 @@ export class PostsService {
   currentPage = 0;
   PAGEPERLIST = 5;
   TOTALNUMBERPAGE: number;
+  results: any;
 
 
   constructor(
-    db: AngularFireDatabase
+    // db: AngularFireDatabase,
+    private http: HttpClient
   ) {
-    this.dbposts = db.object('/posts');
-    this.dbcategories = db.object('/categories');
-    this.dbarchives = db.object('/archives');
+    // this.dbposts = db.object('/posts');
+    // this.dbcategories = db.object('/categories');
+    // this.dbarchives = db.object('/archives');
+  }
+
+  testMongoDB() {
+    // this.http.get('https://api.mlab.com/api/1/databases/blog/collections/Posts?apiKey=jtcTp7Pok2Gl7X_mlLWMJaHj6lzFeGNd')
+    //   .subscribe(data => {
+    //     // Read the result field from the JSON response.
+    //     console.log(data[0]);
+    //     const responseDataObject = data;
+    //     Object.keys(responseDataObject).map(objIdx => {
+    //       console.log(responseDataObject[objIdx]);
+    //     });
+    //     this.results = data['results'];
+    //   }, error => {
+    //     console.error('Error', error);
+    //   });
   }
 
   loadPost() {
 
     const promise = new Promise((resolve, reject) => {
-      this.dbposts.snapshotChanges().subscribe(action => {
-        const tempPosts = action.payload.val();
-        Object.keys(tempPosts).map(objIndex => {
-          this.posts.push(tempPosts[objIndex]);
-        })
+      this.http.get('https://api.mlab.com/api/1/databases/blog/collections/Posts?apiKey=jtcTp7Pok2Gl7X_mlLWMJaHj6lzFeGNd')
+      .subscribe(data => {
+        const responseDataObject = data[0];
+        Object.keys(responseDataObject).map(objIdx => {
+          if ( objIdx !== '_id') {
+            this.posts.push(responseDataObject[objIdx]);
+          }
+        });
         resolve(this.posts.length > 0 ? true : false);
+      }, error => {
+        console.error('Error', error);
       });
     });
+
+    // this.dbposts.snapshotChanges().subscribe(action => {
+    //   const tempPosts = action.payload.val();
+    //   Object.keys(tempPosts).map(objIndex => {
+    //     this.posts.push(tempPosts[objIndex]);
+    //   })
+    //   console.log(this.posts);
+    //   resolve(this.posts.length > 0 ? true : false);
+    // });
 
     return promise;
   }
 
   loadCategories() {
     const promise = new Promise((resolve, reject) => {
-      this.dbcategories.snapshotChanges().subscribe(action => {
-        const tempCategories = action.payload.val();
-        Object.keys(tempCategories).map(objIndex => {
-          this.categories.push(tempCategories[objIndex]);
-        })
+
+      this.http.get('https://api.mlab.com/api/1/databases/blog/collections/Categories?apiKey=jtcTp7Pok2Gl7X_mlLWMJaHj6lzFeGNd')
+      .subscribe(data => {
+        const responseDataObject = data[0];
+        Object.keys(responseDataObject).map(objIdx => {
+          if ( objIdx !== '_id') {
+            this.categories.push(responseDataObject[objIdx]);
+          }
+        });
         resolve(this.categories.length > 0 ? true : false);
+      }, error => {
+        console.error('Error', error);
       });
+
+      // this.dbcategories.snapshotChanges().subscribe(action => {
+      //   const tempCategories = action.payload.val();
+      //   Object.keys(tempCategories).map(objIndex => {
+      //     this.categories.push(tempCategories[objIndex]);
+      //   })
+      //   console.log(this.categories);
+      //   resolve(this.categories.length > 0 ? true : false);
+      // });
     });
 
     return promise;
@@ -59,13 +106,14 @@ export class PostsService {
 
   loadArchives() {
     const promise = new Promise((resolve, reject) => {
-      this.dbarchives.snapshotChanges().subscribe(action => {
-        const tempArchives = action.payload.val();
-        Object.keys(tempArchives).map(objIndex => {
-          this.archives.push(tempArchives[objIndex]);
-        })
-        resolve(this.categories.length > 0 ? true : false);
-      });
+      // this.dbarchives.snapshotChanges().subscribe(action => {
+      //   const tempArchives = action.payload.val();
+      //   Object.keys(tempArchives).map(objIndex => {
+      //     this.archives.push(tempArchives[objIndex]);
+      //   })
+      //   resolve(this.categories.length > 0 ? true : false);
+      // });
+      resolve(true);
     });
 
     return promise;
@@ -80,8 +128,8 @@ export class PostsService {
     const promise = new Promise((resolve, reject) => {
       Promise.all([
         PROMISELOADPOST,
-        PROMISELOADCATEGORIES,
-        PROMISELOADARCHIVE]
+        PROMISELOADCATEGORIES]
+        // PROMISELOADARCHIVE]
       ).then(responsesPromises => {
         this.TOTALNUMBERPAGE = _.chunk(this.posts, this.PAGEPERLIST).length - 1 // Number of pages
         resolve(true);

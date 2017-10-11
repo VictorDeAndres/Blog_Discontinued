@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -10,8 +12,8 @@ import { environment } from '../environments/environment';
 
 import { RouterModule } from '@angular/router';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+// import { AngularFireModule } from 'angularfire2';
+// import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { PostsService } from './services/posts.service';
 
@@ -64,10 +66,11 @@ import { IntroduccionGraphqlComponent } from './post/introduccion-graphql/introd
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     Routing,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    // AngularFireDatabaseModule,
   ],
 
   providers: [
