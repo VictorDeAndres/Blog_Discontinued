@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { PostsService } from './services/posts.service';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +8,5 @@ import { Router, NavigationEnd } from '@angular/router';
   providers: []
 })
 
-export class AppComponent {
+export class AppComponent { }
 
-  constructor(private router: Router) {
-    router.events
-      .subscribe((event: NavigationEnd) => {
-        window.scroll(0, 0);
-      });
-  }
-}

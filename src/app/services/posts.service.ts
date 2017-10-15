@@ -12,7 +12,7 @@ export class PostsService {
   // dbcategories: AngularFireObject<any>;
   // dbarchives: AngularFireObject<any>;
 
-  stringTest = ''
+  stringTest = '';
   posts: Object[] = [];
   categories: Object[] = [];
   archives: Object[] = [];
@@ -32,18 +32,18 @@ export class PostsService {
   }
 
   testMongoDB() {
-    // this.http.get('https://api.mlab.com/api/1/databases/blog/collections/Posts?apiKey=jtcTp7Pok2Gl7X_mlLWMJaHj6lzFeGNd')
-    //   .subscribe(data => {
-    //     // Read the result field from the JSON response.
-    //     console.log(data[0]);
-    //     const responseDataObject = data;
-    //     Object.keys(responseDataObject).map(objIdx => {
-    //       console.log(responseDataObject[objIdx]);
-    //     });
-    //     this.results = data['results'];
-    //   }, error => {
-    //     console.error('Error', error);
-    //   });
+    this.http.get('https://api.mlab.com/api/1/databases/blog/collections/Posts?apiKey=jtcTp7Pok2Gl7X_mlLWMJaHj6lzFeGNd')
+      .subscribe(data => {
+        // Read the result field from the JSON response.
+        console.log(data[0]);
+        const responseDataObject = data;
+        Object.keys(responseDataObject).map(objIdx => {
+          console.log(responseDataObject[objIdx]);
+        });
+        this.results = data['results'];
+      }, error => {
+        console.error('Error', error);
+      });
   }
 
   loadPost() {
