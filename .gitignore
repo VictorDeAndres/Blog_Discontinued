@@ -8,4 +8,6 @@ firebase.json
 seo_files
 ideas
 
-functions
+functions/dist
+functions/dist-ssr
+functions/node_modules
