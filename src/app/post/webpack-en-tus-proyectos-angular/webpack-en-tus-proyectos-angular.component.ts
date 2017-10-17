@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Directive, ElementRef, AfterViewInit} from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
-// import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import {PostPublishInfoComponent} from '../../post-publish-info/post-publish-info.component';
 
 import * as hljs from 'highlight.js';
@@ -18,14 +18,19 @@ export class WebpackEnTusProyectosAngularComponent implements OnInit, AfterViewI
   publishDate = '08 de Julio 2017';
   postCategories: string[] = ['Angular', 'Webpack'];
 
-//   dbcomments: FirebaseListObservable<any[]>;
   postComments: object[] = [];
 
   constructor(
-    // private db: AngularFireDatabase,
     private eltRef: ElementRef,
+    meta: Meta, title: Title,
   ) {
-    // this.dbcomments = db.list(`${this.titlepost}`);
+    title.setTitle('Webpack en tus proyectos Angular');
+    meta.addTags([
+      { name: 'author',   content: 'Victor de Andres'},
+      { name: 'keywords', content: 'angular angularjs webapp webpack eject spa angular-cli'},
+      { name: 'description', content: 'Angular tip para utilizar webpack en los aplicativos angular generados desde el asistente angular-cli' },
+      { name: 'robots', content: 'Index, NoFollow' }
+    ]);
   }
 
   ngOnInit() { }

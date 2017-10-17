@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Directive, ElementRef, AfterViewInit} from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
-// import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import {PostPublishInfoComponent} from '../../post-publish-info/post-publish-info.component';
 
 import * as hljs from 'highlight.js';
@@ -17,14 +17,20 @@ export class TopAngularRouterNavigationComponent implements OnInit, AfterViewIni
   publishDate = '26 de Agosto 2017';
   postCategories: string[] = ['Angular', 'Tips'];
 
-//   dbcomments: FirebaseListObservable<any[]>;
   postComments: object[] = [];
 
   constructor(
-    // private db: AngularFireDatabase,
     private eltRef: ElementRef,
+    meta: Meta, title: Title,
   ) {
-    // this.dbcomments = db.list(`${this.titlepost}`);
+    title.setTitle('Posiciona vista al inicio nueva pagina Angular');
+
+    meta.addTags([
+      { name: 'author',   content: 'Victor de Andres'},
+      { name: 'keywords', content: 'angular tips webapp posicion pagina spa'},
+      { name: 'description', content: 'Angular tip para situar la pagina al inico de pantalla cuando se cambia de ruta' },
+      { name: 'robots', content: 'Index, NoFollow' }
+    ]);
   }
 
   ngOnInit() { }

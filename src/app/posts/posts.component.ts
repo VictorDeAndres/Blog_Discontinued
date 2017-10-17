@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 import { PostsService } from '../services/posts.service';
 
@@ -21,8 +22,16 @@ export class PostsComponent implements OnInit {
   lastPage: boolean;
 
   constructor(
-    private postsService: PostsService
-  ) { }
+    private postsService: PostsService,
+    meta: Meta, title: Title,
+  ) {
+    title.setTitle('Blog Victor de Andres');
+    meta.addTags([
+      { name: 'author',   content: 'Victor de Andres'},
+      { name: 'keywords', content: 'angular angularjs webapp webpack spa angular-cli'},
+      { name: 'robots', content: 'NoIndex, Follow' }
+    ]);
+  }
 
   ngOnInit() {
     this.postsService.getPosts(0)
@@ -69,7 +78,7 @@ export class PostsComponent implements OnInit {
   selectByCategory(event = this.selectCategory) {
     if (event !== undefined) {
       this.selectCategory = event;
-      this.selectArchive = null
+      this.selectArchive = null;
     }
     this.postsService.getPosts(0, this.selectCategory, this.selectArchive)
       .then(responsePromise => {
@@ -85,7 +94,7 @@ export class PostsComponent implements OnInit {
   selectByArchive(event = this.selectArchive) {
     if (event !== undefined) {
       this.selectArchive = event;
-      this.selectCategory = null
+      this.selectCategory = null;
     }
     this.postsService.getPosts(0, this.selectCategory, this.selectArchive)
       .then(responsePromise => {

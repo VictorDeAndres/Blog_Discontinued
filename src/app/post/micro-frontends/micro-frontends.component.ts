@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-micro-frontends',
@@ -13,13 +13,19 @@ export class MicroFrontendsComponent implements OnInit {
   publishDate = '24 de Julio 2017';
   postCategories: string[] = ['WebApps'];
 
-//   dbcomments: FirebaseListObservable<any[]>;
   postComments: object[] = [];
 
   constructor(
-    // db: AngularFireDatabase
+    meta: Meta, title: Title,
   ) {
-    // this.dbcomments = db.list(`${this.titlepost}`);
+    title.setTitle('Micro FrontEnds');
+
+    meta.addTags([
+      { name: 'author',   content: 'Victor de Andres'},
+      { name: 'keywords', content: 'angular webapp micro frontend microfrontend microservicio react jquery vuejs vue spa'},
+      { name: 'description', content: 'Introduccion a desarrollo de aplicaciones web con micro frontends' },
+      { name: 'robots', content: 'Index, NoFollow' }
+    ]);
   }
 
   ngOnInit() { }

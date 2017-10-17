@@ -21,7 +21,7 @@ app.get('**', function(req, res) {
     url: req.path,
     document: index
   }).then(html => {
-    res.set('Cache-Contro', 'public, max-age=600, s-maxage=1200');
+    res.set('Cache-Control', 'public, max-age=600, s-maxage=1200');
     res.status(200).send(html)
   });
 });

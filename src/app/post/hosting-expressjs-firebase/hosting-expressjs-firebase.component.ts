@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Directive, ElementRef, AfterViewInit} from '@angular/core';
-
-// import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import { Meta, Title } from '@angular/platform-browser';
 
 import * as hljs from 'highlight.js';
 
@@ -11,23 +10,28 @@ import * as hljs from 'highlight.js';
   styleUrls: ['./../post.common.component.scss']
 })
 
-// @Directive({
-//     selector: 'code[ highlight]' // css selector for the attribute
-// })
 
 export class HostingExpressJsFirebaseComponent implements OnInit, AfterViewInit {
 
   titlepost = 'Hosting de un proyecto ExpressJS en Firebase';
   publishDate = '11 de Agosto 2017';
   postCategories: string[] = ['ExpressJS', 'Firebase', 'WebApps'];
-  //   dbcomments: FirebaseListObservable<any[]>;
   postComments: object[] = [];
 
   constructor(
     // private db: AngularFireDatabase,
     private eltRef: ElementRef,
-  ){
-    // this.dbcomments = db.list(`${this.titlepost}`);
+    meta: Meta, title: Title,
+  ) {
+    title.setTitle('Hosting de un proyecto ExpressJS en Firebase');
+
+    meta.addTags([
+      { name: 'author',   content: 'Victor de Andres'},
+      { name: 'keywords', content: 'angular firebase hosting express nodejs'},
+      { name: 'description', content: 'Manual para realizar hosting de una aplicacion desarrollada en nodeJs con Express en firebase.' },
+      { name: 'robots', content: 'Index, NoFollow' }
+    ]);
+
   }
 
   ngOnInit() { }
