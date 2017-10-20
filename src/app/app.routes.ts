@@ -10,6 +10,7 @@ import { MicroFrontendsComponent } from './post/micro-frontends/micro-frontends.
 import { HostingExpressJsFirebaseComponent } from './post/hosting-expressjs-firebase/hosting-expressjs-firebase.component';
 import { TopAngularRouterNavigationComponent } from './post/top-angular-router-navigation/top-angular-router-navigation.component';
 import { IntroduccionGraphqlComponent } from './post/introduccion-graphql/introduccion-graphql.component';
+import { JavascriptUnMustComponent } from './post/javascript-un-must/javascript-un-must.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -39,6 +40,9 @@ export const routes: Routes = [
   },
   {
     path: 'post/introduccion-graphql', component: IntroduccionGraphqlComponent
+  },
+  {
+    path: 'post/javascript-un-must', component: JavascriptUnMustComponent
   },
 ];
 

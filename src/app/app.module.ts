@@ -29,12 +29,14 @@ import { MicroFrontendsComponent } from './post/micro-frontends/micro-frontends.
 import { HostingExpressJsFirebaseComponent } from './post/hosting-expressjs-firebase/hosting-expressjs-firebase.component';
 import { TopAngularRouterNavigationComponent } from './post/top-angular-router-navigation/top-angular-router-navigation.component';
 import { IntroduccionGraphqlComponent } from './post/introduccion-graphql/introduccion-graphql.component';
+import { JavascriptUnMustComponent } from './post/javascript-un-must/javascript-un-must.component';
 // [END] Post
 
 // [START] Post Component View
 import { PostPublishInfoComponent } from './post-publish-info/post-publish-info.component';
 import { PostFooterComponent } from './post-footer/post-footer.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
+
 // [END] Post Component View
 
 @NgModule({
@@ -56,11 +58,11 @@ import { PostCommentComponent } from './post-comment/post-comment.component';
     HostingExpressJsFirebaseComponent,
     TopAngularRouterNavigationComponent,
     IntroduccionGraphqlComponent,
+    JavascriptUnMustComponent,
 
     PostPublishInfoComponent,
     PostFooterComponent,
     PostCommentComponent,
-    
   ],
   imports: [
     BrowserModule.withServerTransition({
