@@ -11,6 +11,7 @@ import { HostingExpressJsFirebaseComponent } from './post/hosting-expressjs-fire
 import { TopAngularRouterNavigationComponent } from './post/top-angular-router-navigation/top-angular-router-navigation.component';
 import { IntroduccionGraphqlComponent } from './post/introduccion-graphql/introduccion-graphql.component';
 import { JavascriptUnMustComponent } from './post/javascript-un-must/javascript-un-must.component';
+import { CleanCodeNormasComponent } from './post/clean-code-normas/clean-code-normas.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -42,7 +43,10 @@ export const routes: Routes = [
     path: 'post/introduccion-graphql', component: IntroduccionGraphqlComponent
   },
   {
-    path: 'post/javascript-un-must', component: JavascriptUnMustComponent
+    path: 'post/javascript-un-must-debes-dominar', component: JavascriptUnMustComponent
+  },
+  {
+    path: 'post/clean-code-normas', component: CleanCodeNormasComponent
   },
 ];
 
