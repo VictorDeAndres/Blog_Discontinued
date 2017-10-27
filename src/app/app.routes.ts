@@ -12,6 +12,7 @@ import { TopAngularRouterNavigationComponent } from './post/top-angular-router-n
 import { IntroduccionGraphqlComponent } from './post/introduccion-graphql/introduccion-graphql.component';
 import { JavascriptUnMustComponent } from './post/javascript-un-must/javascript-un-must.component';
 import { CleanCodeNormasComponent } from './post/clean-code-normas/clean-code-normas.component';
+import { ImportanciaTestUnitariosComponent } from './post/importancia-test-unitarios/importancia-test-unitarios.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -47,6 +48,9 @@ export const routes: Routes = [
   },
   {
     path: 'post/clean-code-normas', component: CleanCodeNormasComponent
+  },
+  {
+    path: 'post/importancia-test-unitarios', component: ImportanciaTestUnitariosComponent
   },
 ];
 

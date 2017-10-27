@@ -31,14 +31,13 @@ import { TopAngularRouterNavigationComponent } from './post/top-angular-router-n
 import { IntroduccionGraphqlComponent } from './post/introduccion-graphql/introduccion-graphql.component';
 import { JavascriptUnMustComponent } from './post/javascript-un-must/javascript-un-must.component';
 import { CleanCodeNormasComponent } from './post/clean-code-normas/clean-code-normas.component';
+import { ImportanciaTestUnitariosComponent } from './post/importancia-test-unitarios/importancia-test-unitarios.component';
 // [END] Post
 
 // [START] Post Component View
 import { PostPublishInfoComponent } from './post-publish-info/post-publish-info.component';
 import { PostFooterComponent } from './post-footer/post-footer.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
-
-
 // [END] Post Component View
 
 @NgModule({
@@ -62,11 +61,11 @@ import { PostCommentComponent } from './post-comment/post-comment.component';
     IntroduccionGraphqlComponent,
     JavascriptUnMustComponent,
     CleanCodeNormasComponent,
+    ImportanciaTestUnitariosComponent,
 
     PostPublishInfoComponent,
     PostFooterComponent,
     PostCommentComponent,
-
   ],
   imports: [
     BrowserModule.withServerTransition({
