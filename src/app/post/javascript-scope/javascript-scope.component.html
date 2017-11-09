@@ -24,7 +24,7 @@
       el número de errores y te permitirá realizar mejores desarrollos.</p>
 
     <h3 class="post__title--title-paragraph">
-      Que es el scope.
+      Que es el scope
     </h3>
 
     <p class="post__paragraph">Lo primero es definir qué es el scope. El scope es el ámbito o alcance de una variable, función u objetos en una parte
@@ -35,7 +35,7 @@
       sus reglas propias.</p>
 
     <h3 class="post__title--title-paragraph">
-      Scope Global.
+      Global Scope
     </h3>
 
     <p class="post__paragraph">Empezaré por el más sencillo, el scope global. Este tipo de scope, como su propio nombre indica implica todo el código.
@@ -75,7 +75,7 @@
     </pre>
 
     <h3 class="post__title--title-paragraph">
-      Scope Local.
+      Local Scope
     </h3>
 
     <p class="post__paragraph">El siguiente tipo de scope que vamos a ver es el scope local. Como su propio nombre este tipo de scope es más concreto,
@@ -190,7 +190,7 @@
       el scope de estas variables aunque se encuentre dentro de una función sólo corresponderá al ámbito del bucle o la estructura
       condicional.</p>
 
-    <p class="post__paragraph">En el siguente ejemplo lo vamos a ver con un poco más de detalle.</p>
+    <p class="post__paragraph">En el siguiente ejemplo lo vamos a ver con un poco más de detalle.</p>
 
     <pre>
         <code highlight class="typescript">
@@ -227,17 +227,62 @@
         </code>
     </pre>
 
-
     <p class="post__paragraph">Como puedes observar en la primera parte del ejemplo, cuando hemos utilizado el let para definir la variable idx, cuando
-      ha finalizado el contador el valor de la variable idx seguía siendo 1. Ya que en el bucle for hemos definido la variable
-      con la palabra let, y por ello se ha creado un nuevo scope para la variable.</p>
+        ha finalizado el contador el valor de la variable idx seguía siendo 1. Ya que en el bucle for hemos definido la variable
+        con la palabra let, y por ello se ha creado un nuevo scope para la variable.</p>
     <p class="post__paragraph">Pero en el ejemplo 2, no hemos utilizado let, y por tanto idx se encuentra en el mismo scope por ello cuando finaliza
-      el bucle el valor de la variable idx es 3, porque ha sido modificada en el interior del bucle. </p>
-    <p class="post__paragraph">Hasta aquí este primer post sobre los fundamentos de Javascript, en próximos post iremos avanzando poco a poco en los
-      fundamentos de Javascript.</p>
+        el bucle el valor de la variable idx es 3, porque ha sido modificada en el interior del bucle. </p>
+  
+    <h3 class="post__title--title-paragraph">
+        Qué es un closure
+    </h3>
 
+    <p class="post__paragraph">Un concepto que se encuentra muy unido al concepto scope, es el closure. Es algo muy similar al concepto que hemos visto anteriormente de lexical scope. Un closure es un tipo especial de objeto que combina dos cosas: una función, y el entorno en que se creó esa función. El entorno está formado por las variables locales que estaban dentro del alcance en el momento que se creó el closure.</p>
+ 
+    <p class="post__paragraph">El closure permite acceder a las variables de su función más externa incluso cuando ya hemos invocado la función y hemos obtenido su retorno. De esta forma permitimos que la función retornada mantenga acceso a las variables del scope superior.</p>
+    
+    <p class="post__paragraph">Tal vez con un ejemplo lo veas un poco más claro:</p>
 
+    <pre>
+        <code highlight class="typescript">
 
+      function creaSumador(x) &#123;
+        return function(y) &#123;
+          return x + y;
+        &#125;
+      &#125;
+
+        </code>
+    </pre>
+
+    <p class="post__paragraph">Como ves hemos creado la función creaSumador que le pasamos un parámetro, y nos devolverá una función a la cual le indicaremos un nuevo parámetro que a su vez se sumará al primer parámetro.</p>
+
+    <pre>
+        <code highlight class="typescript">
+
+      var suma5 = creaSumador(5);
+      var suma10 = creaSumador(10);
+
+        </code>
+    </pre>
+
+    <p class="post__paragraph">El siguiente paso que hemos dado ha sido crear dos nuevas variables a las que le estamos pasando el primer parámetro de la suma.</p>
+
+      <pre>
+          <code highlight class="typescript">
+  
+        console.log(suma5(5));  // 10
+        console.log(suma10(5)); // 15
+  
+          </code>
+      </pre>
+
+      <p class="post__paragraph">Y posteriormente llamamos a nuestras dos nuevas variables que nos devolverán la suma del parámetro que les hemos enviado más el parámetro que habíamos enviado anteriormente.</p>
+
+      <p class="post__paragraph">Creo que con este ejemplo lo has podido ver un poco más claro.</p>
+      
+          <p class="post__paragraph">Hasta aquí este primer post sobre los fundamentos de Javascript, en próximos post iremos avanzando poco a poco en los
+              fundamentos de Javascript.</p>          
     <app-post-footer [titlepost]="titlepost"></app-post-footer>
   </div>
 </article>
