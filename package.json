@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:firebase": "ng build -prod && ng build -aot -app ssr"
+    "build:firebase": "ng build -prod && ng build -aot -app ssr",
+    "deploy": "npm run build:firebase && rm -rf ./functions/dist && cp -r ./dist ./functions && rm -rf ./dist/index.html && cp ./seo_files/* ./dist && firebase deploy"
   },
   "private": true,
   "dependencies": {
