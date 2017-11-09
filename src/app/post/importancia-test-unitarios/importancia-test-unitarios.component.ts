@@ -27,8 +27,7 @@ export class ImportanciaTestUnitariosComponent implements OnInit, AfterViewInit 
     meta.addTags([
       { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'clean code buenas practicas test unitarios unit test'},
-      { name: 'description', content: 'La importancia de realizar test unitarios. Ventajas de realizar test unitarios en los desarrollos' },
-      { name: 'robots', content: 'Index, NoFollow' }
+      { name: 'description', content: 'La importancia de realizar test unitarios. Ventajas de realizar test unitarios en los desarrollos' }
     ]);
   }
 

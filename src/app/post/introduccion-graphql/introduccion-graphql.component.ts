@@ -27,8 +27,7 @@ export class IntroduccionGraphqlComponent implements OnInit, AfterViewInit {
     meta.addTags([
       { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'angular firebase api rest graphql spa'},
-      { name: 'description', content: 'Introduccion a Graphql para realizar consultas sustituyendo a api rest' },
-      { name: 'robots', content: 'Index, NoFollow' }
+      { name: 'description', content: 'Introduccion a Graphql para realizar consultas sustituyendo a api rest' }
     ]);
   }
 

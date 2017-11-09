@@ -22,8 +22,7 @@ export class IntroComponent implements OnInit {
   ) {
     title.setTitle('Blog Victor de Andres');
     meta.addTags([
-      { name: 'author',   content: 'Victor de Andres'},
-      { name: 'robots', content: 'Index, Follow' }
+      { name: 'author',   content: 'Victor de Andres'}
     ]);
   }
 

@@ -23,8 +23,7 @@ export class JavascriptUnMustComponent implements OnInit {
     meta.addTags([
       { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'javascript JS'},
-      { name: 'description', content: 'Web Developer: Javascript un must que todo desarrollodor web debe dominar' },
-      { name: 'robots', content: 'Index, NoFollow' }
+      { name: 'description', content: 'Web Developer: Javascript un must que todo desarrollodor web debe dominar' }
     ]);
   }
 

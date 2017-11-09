@@ -28,8 +28,7 @@ export class TopAngularRouterNavigationComponent implements OnInit, AfterViewIni
     meta.addTags([
       { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'angular tips webapp posicion pagina spa'},
-      { name: 'description', content: 'Angular tip para situar la pagina al inico de pantalla cuando se cambia de ruta' },
-      { name: 'robots', content: 'Index, NoFollow' }
+      { name: 'description', content: 'Angular tip para situar la pagina al inico de pantalla cuando se cambia de ruta' }
     ]);
   }
 

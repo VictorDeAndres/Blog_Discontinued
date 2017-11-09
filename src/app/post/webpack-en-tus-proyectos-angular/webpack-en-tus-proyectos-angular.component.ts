@@ -28,8 +28,7 @@ export class WebpackEnTusProyectosAngularComponent implements OnInit, AfterViewI
     meta.addTags([
       { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'angular angularjs webapp webpack eject spa angular-cli'},
-      { name: 'description', content: 'Angular tip para utilizar webpack en los aplicativos angular generados desde el asistente angular-cli' },
-      { name: 'robots', content: 'Index, NoFollow' }
+      { name: 'description', content: 'Angular tip para utilizar webpack en los aplicativos angular generados desde el asistente angular-cli' }
     ]);
   }
 
