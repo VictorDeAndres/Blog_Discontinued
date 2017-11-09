@@ -32,6 +32,7 @@ import { IntroduccionGraphqlComponent } from './post/introduccion-graphql/introd
 import { JavascriptUnMustComponent } from './post/javascript-un-must/javascript-un-must.component';
 import { CleanCodeNormasComponent } from './post/clean-code-normas/clean-code-normas.component';
 import { ImportanciaTestUnitariosComponent } from './post/importancia-test-unitarios/importancia-test-unitarios.component';
+import { JavascriptScopeComponent } from './post/javascript-scope/javascript-scope.component';
 // [END] Post
 
 // [START] Post Component View
@@ -62,10 +63,12 @@ import { PostCommentComponent } from './post-comment/post-comment.component';
     JavascriptUnMustComponent,
     CleanCodeNormasComponent,
     ImportanciaTestUnitariosComponent,
+    JavascriptScopeComponent,
 
     PostPublishInfoComponent,
     PostFooterComponent,
     PostCommentComponent,
+
   ],
   imports: [
     BrowserModule.withServerTransition({

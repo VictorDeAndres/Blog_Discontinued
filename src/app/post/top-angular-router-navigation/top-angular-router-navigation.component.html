@@ -3,29 +3,37 @@
     <div class="post__title"></div>
     <h1 class="post__title--title">
       Posiciona vista al inicio nueva pagina Angular
-    </h1>     
+    </h1>
     <h2 class="post__title--subtitle">
       Posiciona el cursor al inicio de la pagina cuando se carga una nueva ruta en Angular.
-    </h2>  
-    <div class="post__title--footer"></div> 
-    
+    </h2>
+    <div class="post__title--footer"></div>
+
     <app-post-publish-info [publishDate]="publishDate" [postCategories]="postCategories"></app-post-publish-info>
 
     <div class="post__image">
       <img class="post__image--image" src="./../assets/images/posts/angulartips.png" alt="angular tips">
     </div>
 
-    <p class="post__paragraph">Cuando comencé a desarrollar este blog, tenía varias motivos para ello. Y uno de ellos era practicar nuevas tecnologías, para a medida que avanzaba en ellas encontrar problemas que solucionar para mejorar mis conocimientos como desarrollador, además de poder compartirlos con la comunidad.</p>
+    <p class="post__paragraph">Cuando comencé a desarrollar este blog, tenía varias motivos para ello. Y uno de ellos era practicar nuevas tecnologías,
+      para a medida que avanzaba en ellas encontrar problemas que solucionar para mejorar mis conocimientos como desarrollador,
+      además de poder compartirlos con la comunidad.</p>
 
-    <p class="post__paragraph">Tal vez para algunos desarrolladores sean problemas triviales, o tal vez ayude a otros desarrolladores que tengan este mismo problema, o tal vez les proporcione una guía para solucionar algún otro problema. Mi intención es simple. Es compartir para que alguien lo pueda aprovechar, al igual que yo he aprovechado lo que otros han compartido.</p>
+    <p class="post__paragraph">Tal vez para algunos desarrolladores sean problemas triviales, o tal vez ayude a otros desarrolladores que tengan este
+      mismo problema, o tal vez les proporcione una guía para solucionar algún otro problema. Mi intención es simple. Es
+      compartir para que alguien lo pueda aprovechar, al igual que yo he aprovechado lo que otros han compartido.</p>
 
     <h3 class="post__title--title-paragraph">
-      Problema. 
+      Problema.
     </h3>
 
-    <p class="post__paragraph">Cuando estas navegando en un dispositivo móvil, o en páginas con mucha altura puede darse el caso de que hayas realizado bastante scroll hacia abajo y cuando abres el enlace a otra página, esta se abre a la misma altura en la que se encuentra el link en la página anterior.</p>
+    <p class="post__paragraph">Cuando estas navegando en un dispositivo móvil, o en páginas con mucha altura puede darse el caso de que hayas realizado
+      bastante scroll hacia abajo y cuando abres el enlace a otra página, esta se abre a la misma altura en la que se encuentra
+      el link en la página anterior.</p>
 
-    <p class="post__paragraph">Esto es una diferencia de la navegación estándar en una aplicación web normal, donde la página seleccionada se vuelve a cargar y se inicia desde arriba por defecto. Y las páginas SPA, donde no se recarga la página y por tanto se mantiene el scroll que hayamos realizado mientras navegamos entre las páginas de nuestra aplicación SPA.</p>
+    <p class="post__paragraph">Esto es una diferencia de la navegación estándar en una aplicación web normal, donde la página seleccionada se vuelve
+      a cargar y se inicia desde arriba por defecto. Y las páginas SPA, donde no se recarga la página y por tanto se mantiene
+      el scroll que hayamos realizado mientras navegamos entre las páginas de nuestra aplicación SPA.</p>
 
     <p class="post__paragraph">Para ello la primera solución que implante fue la siguiente:</p>
 
@@ -35,15 +43,23 @@
       </code>
     </pre>
 
-    <p class="post__paragraph">Implantar esta instrucción nativa de javascript para situarse automáticamente al inicio de la pantalla. Y debía escribirla al inicio de cada componente.</p>
+    <p class="post__paragraph">Implantar esta instrucción nativa de javascript para situarse automáticamente al inicio de la pantalla. Y debía escribirla
+      al inicio de cada componente.</p>
 
-    <p class="post__paragraph">Aunque era una solución que operativamente solucionaba el problema, no me parecía una solución de un buen desarrollador. </p>
+    <p class="post__paragraph">Aunque era una solución que operativamente solucionaba el problema, no me parecía una solución de un buen desarrollador.
+      </p>
 
     <h3 class="post__title--title-paragraph">
-      Solución. 
+      Solución.
     </h3>
 
-    <p class="post__paragraph">Pero en el router de Angular tenemos el método events en el componente route al cual nos podemos suscribir en el cualquier momento. Los eventos que tenemos predefinido son los siguientes <span class="post__paragraph--font-weight">NavigationStart</span>, <span class="post__paragraph--font-weight">NavigationCancel</span>, <span class="post__paragraph--font-weight">NavigationEnd</span> y <span class="post__paragraph--font-weight">NavigationError</span>. Para solucionar este problema solo necesitamos el evento <span class="post__paragraph--font-weight">NavigationEnd</span>.</p>
+    <p class="post__paragraph">Pero en el router de Angular tenemos el método events en el componente route al cual nos podemos suscribir en el cualquier
+      momento. Los eventos que tenemos predefinido son los siguientes
+      <span class="post__paragraph--font-weight">NavigationStart</span>,
+      <span class="post__paragraph--font-weight">NavigationCancel</span>,
+      <span class="post__paragraph--font-weight">NavigationEnd</span> y
+      <span class="post__paragraph--font-weight">NavigationError</span>. Para solucionar este problema solo necesitamos el evento
+      <span class="post__paragraph--font-weight">NavigationEnd</span>.</p>
 
     <p class="post__paragraph">Por lo que nuestro componente principal debería ser similar al siguiente.</p>
 
@@ -70,12 +86,17 @@
       </code>
     </pre>
 
-    <p class="post__paragraph">Como puedes observar esta es una solución mucho más limpia, que la primera que hicimos, y que además nos proporciona una nueva puerta a realizar ciertos eventos cuando estamos navegando en nuestra aplicación.</p>
+    <p class="post__paragraph">Como puedes observar esta es una solución mucho más limpia, que la primera que hicimos, y que además nos proporciona
+      una nueva puerta a realizar ciertos eventos cuando estamos navegando en nuestra aplicación.</p>
 
-    <p class="post__paragraph">Una recomendación, no utilices está funcionalidad para aplicar la seguridad en tu aplicación. Para ello debes utilizar las <span class="post__paragraph--font-weight">guards</span>. Si quieres puedes leer el siguiente artículo <a href="https://blog.thoughtram.io/angular/2016/07/18/guards-in-angular-2.html" title="protecting routes using guards in angular">"Protecting routes using guards in angular"</a> escrito por @PascalPrecht de Thoughtram donde podrás saber más sobre las guards de Angular.</p>
+    <p class="post__paragraph">Una recomendación, no utilices está funcionalidad para aplicar la seguridad en tu aplicación. Para ello debes utilizar
+      las
+      <span class="post__paragraph--font-weight">guards</span>. Si quieres puedes leer el siguiente artículo
+      <a href="https://blog.thoughtram.io/angular/2016/07/18/guards-in-angular-2.html"
+        title="protecting routes using guards in angular">"Protecting routes using guards in angular"</a> escrito por @PascalPrecht de Thoughtram donde podrás saber más sobre
+      las guards de Angular.</p>
 
     <app-post-footer [titlepost]="titlepost"></app-post-footer>
   </div>
 </article>
 <!-- <post-comment [idpost]="titlepost" [postComments]="dbcomments"></post-comment> -->
-
