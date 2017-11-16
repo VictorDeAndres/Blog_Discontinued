@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { Contactform } from './../classes/contactform';
+import { environment } from './../../environments/environment';
 
 @Component({
   selector: 'app-blog-contact',
@@ -22,7 +23,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const url = `http://victordeandres.es/blogcontact`;
+    const url = `${environment.hostDatabase}/blogcontact`;
 
     this.http
       .post(url, this.contact)
