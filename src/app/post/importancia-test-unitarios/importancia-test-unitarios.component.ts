@@ -15,8 +15,8 @@ export class ImportanciaTestUnitariosComponent implements OnInit, AfterViewInit 
 
   titlepost = 'La importancia de los test unitarios';
   publishDate = '27 de Octubre 2017';
+  url = 'importancia-test-unitarios';
   postCategories: string[] = ['Fundamentos', 'Unit Test'];
-  postComments: object[] = [];
 
   constructor(
     private eltRef: ElementRef,

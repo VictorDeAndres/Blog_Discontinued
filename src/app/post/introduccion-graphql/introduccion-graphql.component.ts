@@ -15,8 +15,8 @@ export class IntroduccionGraphqlComponent implements OnInit, AfterViewInit {
 
   titlepost = 'Introducción a GraphQL';
   publishDate = '09 de Septiembre 2017';
+  url = 'introduccion-graphql';
   postCategories: string[] = ['GraphQL', 'WebApps'];
-  postComments: object[] = [];
 
   constructor(
     private eltRef: ElementRef,

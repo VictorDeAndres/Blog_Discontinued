@@ -15,9 +15,8 @@ export class TopAngularRouterNavigationComponent implements OnInit, AfterViewIni
 
   titlepost = 'Posiciona vista al inicio nueva pagina Angular';
   publishDate = '26 de Agosto 2017';
+  url = 'top-angular-router-navigation';
   postCategories: string[] = ['Angular', 'Tips'];
-
-  postComments: object[] = [];
 
   constructor(
     private eltRef: ElementRef,

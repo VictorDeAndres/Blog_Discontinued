@@ -11,6 +11,7 @@ export class MicroFrontendsComponent implements OnInit {
 
   titlepost = 'Micro FrontEnds';
   publishDate = '24 de Julio 2017';
+  url = 'micro-frontends';
   postCategories: string[] = ['WebApps'];
 
   postComments: object[] = [];

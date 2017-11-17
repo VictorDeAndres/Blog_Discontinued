@@ -11,9 +11,8 @@ export class JavascriptUnMustComponent implements OnInit {
 
   titlepost = 'Javascritp un "MUST"';
   publishDate = '23 de Septiembre 2017';
+  url = 'javascript-un-must-debes-dominar';
   postCategories: string[] = ['Javascript'];
-
-  postComments: object[] = [];
 
   constructor(
     meta: Meta, title: Title,

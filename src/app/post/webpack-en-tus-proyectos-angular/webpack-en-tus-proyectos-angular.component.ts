@@ -16,9 +16,8 @@ export class WebpackEnTusProyectosAngularComponent implements OnInit, AfterViewI
 
   titlepost = 'Webpack en tus proyectos Angular';
   publishDate = '08 de Julio 2017';
+  url = 'webpack-en-tus-proyectos-angular';
   postCategories: string[] = ['Angular', 'Webpack'];
-
-  postComments: object[] = [];
 
   constructor(
     private eltRef: ElementRef,

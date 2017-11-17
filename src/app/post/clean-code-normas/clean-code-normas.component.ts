@@ -14,9 +14,8 @@ export class CleanCodeNormasComponent implements  OnInit, AfterViewInit {
 
   titlepost = 'Introduccion Clean Code (I)';
   publishDate = '07 de Octubre 2017';
+  url = 'clean-code-normas';
   postCategories: string[] = ['Fundamentos', 'Buenas Practicas'];
-
-  postComments: object[] = [];
 
   constructor(
     private eltRef: ElementRef,

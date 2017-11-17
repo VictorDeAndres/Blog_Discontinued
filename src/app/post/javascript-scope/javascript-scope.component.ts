@@ -13,9 +13,9 @@ import * as hljs from 'highlight.js';
 export class JavascriptScopeComponent implements OnInit, AfterViewInit {
 
   titlepost = 'Fundamentos Javascript - Scope';
+  url = 'javascript-scope';
   publishDate = '10 de Noviembre 2017';
   postCategories: string[] = ['Fundamentos', 'Javascript'];
-  postComments: object[] = [];
 
   constructor(
     private eltRef: ElementRef,
@@ -30,7 +30,7 @@ export class JavascriptScopeComponent implements OnInit, AfterViewInit {
     ]);
   }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     this.eltRef.nativeElement.querySelectorAll('pre code').forEach(code => hljs.highlightBlock(code) );

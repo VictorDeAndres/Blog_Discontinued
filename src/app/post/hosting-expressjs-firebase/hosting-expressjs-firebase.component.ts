@@ -15,8 +15,8 @@ export class HostingExpressJsFirebaseComponent implements OnInit, AfterViewInit 
 
   titlepost = 'Hosting de un proyecto ExpressJS en Firebase';
   publishDate = '11 de Agosto 2017';
+  url = 'hosting-expressjs-firebase';
   postCategories: string[] = ['ExpressJS', 'Firebase', 'WebApps'];
-  postComments: object[] = [];
 
   constructor(
     // private db: AngularFireDatabase,
