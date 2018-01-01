@@ -14,6 +14,7 @@ import { JavascriptUnMustComponent } from './post/javascript-un-must/javascript-
 import { CleanCodeNormasComponent } from './post/clean-code-normas/clean-code-normas.component';
 import { ImportanciaTestUnitariosComponent } from './post/importancia-test-unitarios/importancia-test-unitarios.component';
 import { JavascriptScopeComponent } from './post/javascript-scope/javascript-scope.component';
+import { JavascriptHoistingComponent } from './post/javascript-hoisting/javascript-hoisting.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -55,6 +56,9 @@ export const routes: Routes = [
   },
   {
     path: 'post/javascript-scope', component: JavascriptScopeComponent
+  },
+  {
+    path: 'post/javascript-hoisting', component: JavascriptHoistingComponent
   },
 ];
 

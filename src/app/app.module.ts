@@ -33,12 +33,14 @@ import { JavascriptUnMustComponent } from './post/javascript-un-must/javascript-
 import { CleanCodeNormasComponent } from './post/clean-code-normas/clean-code-normas.component';
 import { ImportanciaTestUnitariosComponent } from './post/importancia-test-unitarios/importancia-test-unitarios.component';
 import { JavascriptScopeComponent } from './post/javascript-scope/javascript-scope.component';
+import { JavascriptHoistingComponent } from './post/javascript-hoisting/javascript-hoisting.component';
 // [END] Post
 
 // [START] Post Component View
 import { PostPublishInfoComponent } from './post-publish-info/post-publish-info.component';
 import { PostFooterComponent } from './post-footer/post-footer.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
+
 // [END] Post Component View
 
 @NgModule({
@@ -64,6 +66,7 @@ import { PostCommentComponent } from './post-comment/post-comment.component';
     CleanCodeNormasComponent,
     ImportanciaTestUnitariosComponent,
     JavascriptScopeComponent,
+    JavascriptHoistingComponent,
 
     PostPublishInfoComponent,
     PostFooterComponent,
