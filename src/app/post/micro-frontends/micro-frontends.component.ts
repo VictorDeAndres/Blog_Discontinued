@@ -22,9 +22,9 @@ export class MicroFrontendsComponent implements OnInit {
     title.setTitle('Micro FrontEnds');
 
     meta.addTags([
-      { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'angular webapp micro frontend microfrontend microservicio react jquery vuejs vue spa'},
-      { name: 'description', content: 'Introduccion a desarrollo de aplicaciones web con micro frontends' }
+      { name: 'description', content: 'Introduccion a desarrollo de aplicaciones web con micro frontends' },
+      { name: 'robots', content: 'Index, Follow' }
     ]);
   }
 

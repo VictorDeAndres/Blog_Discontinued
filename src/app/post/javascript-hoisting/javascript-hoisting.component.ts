@@ -23,9 +23,9 @@ export class JavascriptHoistingComponent implements OnInit, AfterViewInit {
     title.setTitle('Fundamentos Javascript - Hoisting');
 
     meta.addTags([
-      { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'javascript js fundamentos introduccion hoisting '},
-      { name: 'description', content: 'Fundamentos de JavaScript. Definicion e introduccion hoisting' }
+      { name: 'description', content: 'Fundamentos de JavaScript. Definicion e introduccion hoisting' },
+      { name: 'robots', content: 'Index, Follow' }
     ]);
   }
 

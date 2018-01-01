@@ -24,9 +24,9 @@ export class JavascriptScopeComponent implements OnInit, AfterViewInit {
     title.setTitle('Fundamentos Javascript - Scope');
 
     meta.addTags([
-      { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'javascript js fundamentos introduccion definicion scope '},
-      { name: 'description', content: 'Fundamentos de JavaScript. Definicion y tipos scope. Global, local, function, lexical, block statments' }
+      { name: 'description', content: 'Fundamentos de JavaScript. Definicion y tipos scope. Global, local, function, lexical, block statments' },
+      { name: 'robots', content: 'Index, Follow' }
     ]);
   }
 

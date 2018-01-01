@@ -24,9 +24,9 @@ export class CleanCodeNormasComponent implements  OnInit, AfterViewInit {
     title.setTitle('Clean Code - Normas');
 
     meta.addTags([
-      { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'clean code buenas practicas fundamentos'},
-      { name: 'description', content: 'Introduccion al Clean Code. Introducción a las normas' }
+      { name: 'description', content: 'Introduccion al Clean Code. Introducción a las normas' },
+      { name: 'robots', content: 'Index, Follow' }
     ]);
   }
 

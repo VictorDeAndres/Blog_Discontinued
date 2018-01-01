@@ -25,9 +25,9 @@ export class IntroduccionGraphqlComponent implements OnInit, AfterViewInit {
     title.setTitle('Hosting de un proyecto ExpressJS en Firebase');
 
     meta.addTags([
-      { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'angular firebase api rest graphql spa'},
-      { name: 'description', content: 'Introduccion a Graphql para realizar consultas sustituyendo a api rest' }
+      { name: 'description', content: 'Introduccion a Graphql para realizar consultas sustituyendo a api rest' },
+      { name: 'robots', content: 'Index, Follow' }
     ]);
   }
 

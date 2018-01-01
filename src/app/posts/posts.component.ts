@@ -28,7 +28,8 @@ export class PostsComponent implements OnInit {
     title.setTitle('Blog Victor de Andres');
     meta.addTags([
       { name: 'author',   content: 'Victor de Andres'},
-      { name: 'keywords', content: 'angular angularjs webapp webpack spa angular-cli'}
+      { name: 'keywords', content: 'angular angularjs webapp webpack spa angular-cli javascript js'},
+      { name: 'robots', content: 'Index, Follow' }
     ]);
   }
 

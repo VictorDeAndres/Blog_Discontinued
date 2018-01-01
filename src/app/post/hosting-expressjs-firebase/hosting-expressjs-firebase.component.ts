@@ -26,9 +26,9 @@ export class HostingExpressJsFirebaseComponent implements OnInit, AfterViewInit 
     title.setTitle('Hosting de un proyecto ExpressJS en Firebase');
 
     meta.addTags([
-      { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'angular firebase hosting express nodejs'},
-      { name: 'description', content: 'Manual para realizar hosting de una aplicacion desarrollada en nodeJs con Express en firebase.' }
+      { name: 'description', content: 'Manual para realizar hosting de una aplicacion desarrollada en nodeJs con Express en firebase.' },
+      { name: 'robots', content: 'Index, Follow' }
     ]);
 
   }
