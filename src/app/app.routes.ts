@@ -15,6 +15,7 @@ import { CleanCodeNormasComponent } from './post/clean-code-normas/clean-code-no
 import { ImportanciaTestUnitariosComponent } from './post/importancia-test-unitarios/importancia-test-unitarios.component';
 import { JavascriptScopeComponent } from './post/javascript-scope/javascript-scope.component';
 import { JavascriptHoistingComponent } from './post/javascript-hoisting/javascript-hoisting.component';
+import { GitDesdeLineaComandosComponent } from './post/git-desde-linea-comandos/git-desde-linea-comandos.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -59,6 +60,9 @@ export const routes: Routes = [
   },
   {
     path: 'post/javascript-hoisting', component: JavascriptHoistingComponent
+  },
+  {
+    path: 'post/git_desde_linea_comandos', component: GitDesdeLineaComandosComponent
   },
 ];
 
