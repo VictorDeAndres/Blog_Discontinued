@@ -16,6 +16,8 @@ import { ImportanciaTestUnitariosComponent } from './post/importancia-test-unita
 import { JavascriptScopeComponent } from './post/javascript-scope/javascript-scope.component';
 import { JavascriptHoistingComponent } from './post/javascript-hoisting/javascript-hoisting.component';
 import { GitDesdeLineaComandosComponent } from './post/git-desde-linea-comandos/git-desde-linea-comandos.component';
+// tslint:disable-next-line:max-line-length
+import { IntroduccionExpresionesRegularesComponent } from './post/introduccion-expresiones-regulares/introduccion-expresiones-regulares.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -63,6 +65,9 @@ export const routes: Routes = [
   },
   {
     path: 'post/git_desde_linea_comandos', component: GitDesdeLineaComandosComponent
+  },
+  {
+    path: 'post/introduccion-expresiones-regulares', component: IntroduccionExpresionesRegularesComponent
   },
 ];
 

@@ -35,12 +35,15 @@ import { ImportanciaTestUnitariosComponent } from './post/importancia-test-unita
 import { JavascriptScopeComponent } from './post/javascript-scope/javascript-scope.component';
 import { JavascriptHoistingComponent } from './post/javascript-hoisting/javascript-hoisting.component';
 import { GitDesdeLineaComandosComponent } from './post/git-desde-linea-comandos/git-desde-linea-comandos.component';
+// tslint:disable-next-line:max-line-length
+import { IntroduccionExpresionesRegularesComponent } from './post/introduccion-expresiones-regulares/introduccion-expresiones-regulares.component';
 // [END] Post
 
 // [START] Post Component View
 import { PostPublishInfoComponent } from './post-publish-info/post-publish-info.component';
 import { PostFooterComponent } from './post-footer/post-footer.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
+
 // [END] Post Component View
 
 @NgModule({
@@ -67,12 +70,12 @@ import { PostCommentComponent } from './post-comment/post-comment.component';
     ImportanciaTestUnitariosComponent,
     JavascriptScopeComponent,
     JavascriptHoistingComponent,
+    GitDesdeLineaComandosComponent,
+    IntroduccionExpresionesRegularesComponent,
 
     PostPublishInfoComponent,
     PostFooterComponent,
     PostCommentComponent,
-    GitDesdeLineaComandosComponent,
-
   ],
   imports: [
     BrowserModule.withServerTransition({
