@@ -2,13 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { RouterModule } from '@angular/router';
 import { Routing } from './app.routes';
 
+import { HttpinterceptorService } from './services/httpinterceptor.service';
 import { PostsService } from './services/posts.service';
 import { ToArrayPipe } from './pipes/to-array-key.pipe';
 import { ToArrayValuePipe } from './pipes/to-array-value.pipe';
@@ -37,12 +37,14 @@ import { JavascriptHoistingComponent } from './post/javascript-hoisting/javascri
 import { GitDesdeLineaComandosComponent } from './post/git-desde-linea-comandos/git-desde-linea-comandos.component';
 // tslint:disable-next-line:max-line-length
 import { IntroduccionExpresionesRegularesComponent } from './post/introduccion-expresiones-regulares/introduccion-expresiones-regulares.component';
+import { IntroduccionWebcomponentsComponent } from './post/introduccion-webcomponents/introduccion-webcomponents.component';
 // [END] Post
 
 // [START] Post Component View
 import { PostPublishInfoComponent } from './post-publish-info/post-publish-info.component';
 import { PostFooterComponent } from './post-footer/post-footer.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
+
 
 // [END] Post Component View
 
@@ -72,7 +74,7 @@ import { PostCommentComponent } from './post-comment/post-comment.component';
     JavascriptHoistingComponent,
     GitDesdeLineaComandosComponent,
     IntroduccionExpresionesRegularesComponent,
-
+    IntroduccionWebcomponentsComponent,
     PostPublishInfoComponent,
     PostFooterComponent,
     PostCommentComponent,
@@ -87,7 +89,12 @@ import { PostCommentComponent } from './post-comment/post-comment.component';
     Routing
   ],
   providers: [
-    PostsService
+    PostsService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpinterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -22,7 +22,7 @@ export class IntroduccionGraphqlComponent implements OnInit, AfterViewInit {
     private eltRef: ElementRef,
     meta: Meta, title: Title,
   ) {
-    title.setTitle('Hosting de un proyecto ExpressJS en Firebase');
+    title.setTitle('Introduccion a GraphQL');
 
     meta.addTags([
       { name: 'keywords', content: 'angular firebase api rest graphql spa'},

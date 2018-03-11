@@ -18,6 +18,7 @@ import { JavascriptHoistingComponent } from './post/javascript-hoisting/javascri
 import { GitDesdeLineaComandosComponent } from './post/git-desde-linea-comandos/git-desde-linea-comandos.component';
 // tslint:disable-next-line:max-line-length
 import { IntroduccionExpresionesRegularesComponent } from './post/introduccion-expresiones-regulares/introduccion-expresiones-regulares.component';
+import { IntroduccionWebcomponentsComponent } from './post/introduccion-webcomponents/introduccion-webcomponents.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -68,6 +69,9 @@ export const routes: Routes = [
   },
   {
     path: 'post/introduccion-expresiones-regulares', component: IntroduccionExpresionesRegularesComponent
+  },
+  {
+    path: 'post/introduccion-webcomponents', component: IntroduccionWebcomponentsComponent
   },
 ];
 
