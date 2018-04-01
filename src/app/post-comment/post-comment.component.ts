@@ -44,7 +44,7 @@ export class PostCommentComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.loadComments();
+    // this.loadComments();
   }
 
   loadComments(): void {

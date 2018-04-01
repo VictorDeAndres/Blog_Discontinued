@@ -20,7 +20,7 @@ export class IntroComponent implements OnInit {
     private postsService: PostsService,
     meta: Meta, title: Title,
   ) {
-    title.setTitle('Blog Victor de Andres');
+    title.setTitle('Victor de Andres');
     meta.addTags([
       { name: 'author',   content: 'Victor de Andres'},
       { name: 'keywords', content: 'victor de andres blog team lead front end developer'},

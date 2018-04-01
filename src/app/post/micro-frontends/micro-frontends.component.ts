@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { Component, OnInit, Renderer2, Inject  } from '@angular/core';
+import {Directive, ElementRef, AfterViewInit} from '@angular/core';
+import { Meta, Title, DOCUMENT } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-micro-frontends',
@@ -18,6 +19,8 @@ export class MicroFrontendsComponent implements OnInit {
 
   constructor(
     meta: Meta, title: Title,
+    private _renderer2: Renderer2,
+    @Inject(DOCUMENT) private _document
   ) {
     title.setTitle('Micro FrontEnds');
 
@@ -28,6 +31,37 @@ export class MicroFrontendsComponent implements OnInit {
     ]);
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    const scriptLdJson = this._renderer2.createElement('script');
+    scriptLdJson.type = `application/ld+json`;
+    scriptLdJson.text = `
+      { "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Micro FrontEnds",
+      "alternativeHeadline": "Enfoque de microservicios para el desarrollo web front-end",
+      "image": "https://victordeandres.es/assets/images/posts/microfrontend.png",
+      "editor": "Victor de Andres",
+      "genre": "front end software development",
+      "keywords": "angular webapp micro frontend microfrontend microservicio react jquery vuejs vue spa",
+      "wordcount": "442",
+      "url": "https://victordeandres.es/post/micro-frontends",
+      "datePublished": "2017-07-24",
+      "dateCreated": "2017-07-24",
+      "dateModified": "2017-07-24",
+      "description": "Introduccion a desarrollo de aplicaciones web con micro frontends",
+      "author": {
+        "@type": "Person",
+        "name": "Victor de Andres"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Victor de Andres"
+      },
+      "mainEntityOfPage": "https://victordeandres.es/post"
+      }
+    `;
+
+    this._renderer2.appendChild(this._document.body, scriptLdJson);
+  }
 
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, Inject  } from '@angular/core';
 import {Directive, ElementRef, AfterViewInit} from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { Meta, Title, DOCUMENT } from '@angular/platform-browser';
 
 import * as hljs from 'highlight.js';
 
@@ -22,6 +22,8 @@ export class HostingExpressJsFirebaseComponent implements OnInit, AfterViewInit 
     // private db: AngularFireDatabase,
     private eltRef: ElementRef,
     meta: Meta, title: Title,
+    private _renderer2: Renderer2,
+    @Inject(DOCUMENT) private _document
   ) {
     title.setTitle('Hosting de un proyecto ExpressJS en Firebase');
 
@@ -33,7 +35,38 @@ export class HostingExpressJsFirebaseComponent implements OnInit, AfterViewInit 
 
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    const scriptLdJson = this._renderer2.createElement('script');
+    scriptLdJson.type = `application/ld+json`;
+    scriptLdJson.text = `
+      { "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Hosting de un proyecto ExpressJS en Firebase",
+      "alternativeHeadline": "Habilita webpack en tus proyectos Angular 2+",
+      "image": "https://victordeandres.es/assets/images/posts/firebase_express.png",
+      "editor": "Victor de Andres",
+      "genre": "front end software development",
+      "keywords": "angular firebase hosting express nodejs",
+      "wordcount": "847",
+      "url": "https://victordeandres.es/post/hosting-expressjs-firebase",
+      "datePublished": "2017-08-11",
+      "dateCreated": "2017-08-11",
+      "dateModified": "2017-08-11",
+      "description": "Manual para realizar hosting de una aplicacion desarrollada en nodeJs con Express en firebase",
+      "author": {
+        "@type": "Person",
+        "name": "Victor de Andres"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Victor de Andres"
+      },
+      "mainEntityOfPage": "https://victordeandres.es/post"
+      }
+    `;
+
+    this._renderer2.appendChild(this._document.body, scriptLdJson);
+  }
 
   ngAfterViewInit() {
     this.eltRef.nativeElement.querySelectorAll('pre code').forEach(code => hljs.highlightBlock(code) );
