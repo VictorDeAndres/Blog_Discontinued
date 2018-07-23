@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
@@ -11,16 +12,14 @@ import { environment } from './../../environments/environment';
   styleUrls: ['./contact.component.scss']
 })
 
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
   contact = new Contactform('', '', '');
 
   constructor(
-    private http: Http
+    private http: Http,
+    private router: Router
   ) { }
-
-  ngOnInit() {
-  }
 
   onSubmit(): void {
     const url = `${environment.hostDatabase}/blogcontact`;
@@ -28,7 +27,7 @@ export class ContactComponent implements OnInit {
     this.http
       .post(url, this.contact)
         .subscribe(data => {
-          console.info(`${data.status}` );
+          this.router.navigateByUrl('/posts');
         }, error => {
           console.error(`${error.status} - ${error.statusText}`);
         });
