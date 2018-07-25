@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2, Inject  } from '@angular/core';
-import {Directive, ElementRef, AfterViewInit} from '@angular/core';
-import { Meta, Title, DOCUMENT } from '@angular/platform-browser';
+import { ElementRef, AfterViewInit} from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 import {PostPublishInfoComponent} from '../../post-publish-info/post-publish-info.component';
 
@@ -22,8 +22,6 @@ export class WebpackEnTusProyectosAngularComponent implements OnInit, AfterViewI
   constructor(
     private eltRef: ElementRef,
     meta: Meta, title: Title,
-    private _renderer2: Renderer2,
-    @Inject(DOCUMENT) private _document
   ) {
     title.setTitle('Webpack en tus proyectos Angular');
     meta.addTags([
@@ -35,8 +33,7 @@ export class WebpackEnTusProyectosAngularComponent implements OnInit, AfterViewI
   }
 
   ngOnInit() {
-    const scriptLdJson = this._renderer2.createElement('script');
-    scriptLdJson.type = `application/ld+json`;
+    const scriptLdJson = document.createElement('script');
     scriptLdJson.text = `
       { "@context": "http://schema.org",
       "@type": "BlogPosting",
@@ -63,8 +60,8 @@ export class WebpackEnTusProyectosAngularComponent implements OnInit, AfterViewI
       "mainEntityOfPage": "https://victordeandres.es/post"
       }
     `;
-
-    this._renderer2.appendChild(this._document.body, scriptLdJson);
+    scriptLdJson.type = 'application/ld+json';
+    document.getElementsByTagName('head')[0].appendChild(scriptLdJson);
   }
 
   ngAfterViewInit() {

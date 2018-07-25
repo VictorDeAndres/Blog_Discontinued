@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2, Inject  } from '@angular/core';
-import {Directive, ElementRef, AfterViewInit} from '@angular/core';
-import { Meta, Title, DOCUMENT } from '@angular/platform-browser';
+import { ElementRef, AfterViewInit} from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 
 import * as hljs from 'highlight.js';
@@ -21,8 +21,6 @@ export class IntroduccionGraphqlComponent implements OnInit, AfterViewInit {
   constructor(
     private eltRef: ElementRef,
     meta: Meta, title: Title,
-    private _renderer2: Renderer2,
-    @Inject(DOCUMENT) private _document
   ) {
     title.setTitle('Introduccion a GraphQL');
 
@@ -34,8 +32,7 @@ export class IntroduccionGraphqlComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    const scriptLdJson = this._renderer2.createElement('script');
-    scriptLdJson.type = `application/ld+json`;
+    const scriptLdJson = document.createElement('script');
     scriptLdJson.text = `
       { "@context": "http://schema.org",
       "@type": "BlogPosting",
@@ -62,8 +59,8 @@ export class IntroduccionGraphqlComponent implements OnInit, AfterViewInit {
       "mainEntityOfPage": "https://victordeandres.es/post"
       }
     `;
-
-    this._renderer2.appendChild(this._document.body, scriptLdJson);
+    scriptLdJson.type = 'application/ld+json';
+    document.getElementsByTagName('head')[0].appendChild(scriptLdJson);
   }
 
   ngAfterViewInit() {

@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2, Inject  } from '@angular/core';
-import {Directive, ElementRef, AfterViewInit} from '@angular/core';
-import { Meta, Title, DOCUMENT } from '@angular/platform-browser';
+import {ElementRef, AfterViewInit} from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 
 import * as hljs from 'highlight.js';
@@ -21,8 +21,6 @@ export class CleanCodeNormasComponent implements  OnInit, AfterViewInit {
   constructor(
     private eltRef: ElementRef,
     meta: Meta, title: Title,
-    private _renderer2: Renderer2,
-    @Inject(DOCUMENT) private _document
   ) {
     title.setTitle('Clean Code - Normas');
 
@@ -34,8 +32,7 @@ export class CleanCodeNormasComponent implements  OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    const scriptLdJson = this._renderer2.createElement('script');
-    scriptLdJson.type = `application/ld+json`;
+    const scriptLdJson = document.createElement('script');
     scriptLdJson.text = `
       { "@context": "http://schema.org",
       "@type": "BlogPosting",
@@ -55,15 +52,12 @@ export class CleanCodeNormasComponent implements  OnInit, AfterViewInit {
         "@type": "Person",
         "name": "Victor de Andres"
       },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Victor de Andres"
-      },
       "mainEntityOfPage": "https://victordeandres.es/post"
       }
     `;
+    scriptLdJson.type = 'application/ld+json';
+    document.getElementsByTagName('head')[0].appendChild(scriptLdJson);
 
-    this._renderer2.appendChild(this._document.body, scriptLdJson);
   }
 
   ngAfterViewInit() {
