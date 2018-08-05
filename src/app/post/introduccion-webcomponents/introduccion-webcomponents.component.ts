@@ -38,7 +38,7 @@ export class IntroduccionWebcomponentsComponent implements OnInit, AfterViewInit
     scriptLdJson.text = `
       { "@context": "http://schema.org",
       "@type": "BlogPosting",
-      "headline": "Introduccion a los WebComponents,
+      "headline": "Introduccion a los WebComponents",
       "alternativeHeadline": "Introducción y caracteristicas de los WebComponents",
       "image": "https://victordeandres.es/assets/images/posts/webcomponents.png",
       "editor": "Victor de Andres",
@@ -56,7 +56,11 @@ export class IntroduccionWebcomponentsComponent implements OnInit, AfterViewInit
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Victor de Andres"
+        "name": "Victor de Andres",
+        "logo": {
+        "@type": "imageObject",
+        "url": "https://victordeandres.es/assets/images/LogoFondoBlanco.png"
+        }
       },
       "mainEntityOfPage": "https://victordeandres.es/post"
       }

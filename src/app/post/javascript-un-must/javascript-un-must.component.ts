@@ -49,7 +49,11 @@ export class JavascriptUnMustComponent implements OnInit {
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Victor de Andres"
+        "name": "Victor de Andres",
+        "logo": {
+        "@type": "imageObject",
+        "url": "https://victordeandres.es/assets/images/LogoFondoBlanco.png"
+        }
       },
       "mainEntityOfPage": "https://victordeandres.es/post"
       }

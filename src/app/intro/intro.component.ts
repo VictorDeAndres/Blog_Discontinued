@@ -29,6 +29,24 @@ export class IntroComponent implements OnInit {
   }
 
   ngOnInit() {
+    const scriptLdJson = document.createElement('script');
+    scriptLdJson.text = `{
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Victor de Andres",
+      "url": "https://victordeandres.es",
+      "jobTitle": "Full Stack Developer | Software Engineer",
+      "gender": "male",
+      "image": "https://victordeandres.es/assets/images/LogoFondoBlanco.png",
+      "sameAs": [
+          "http://es.linkedin.com/in/vdeandres",
+          "https://github.com/VictorDeAndres",
+          "https://twitter.com/victor_deandres"
+      ]
+    }
+    `;
+    scriptLdJson.type = 'application/ld+json';
+    document.getElementsByTagName('head')[0].appendChild(scriptLdJson);
     this.postsService.getPosts(0)
       .then(responsePromise => {
         this.showLoading = true;
