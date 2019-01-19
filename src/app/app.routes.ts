@@ -19,6 +19,8 @@ import { GitDesdeLineaComandosComponent } from './post/git-desde-linea-comandos/
 // tslint:disable-next-line:max-line-length
 import { IntroduccionExpresionesRegularesComponent } from './post/introduccion-expresiones-regulares/introduccion-expresiones-regulares.component';
 import { IntroduccionWebcomponentsComponent } from './post/introduccion-webcomponents/introduccion-webcomponents.component';
+import { AngularWebcomponentsComponent } from './post/angular-webcomponents/angular-webcomponents.component';
+
 
 // Route Configuration
 export const routes: Routes = [
@@ -72,6 +74,9 @@ export const routes: Routes = [
   },
   {
     path: 'post/introduccion-webcomponents', component: IntroduccionWebcomponentsComponent
+  },
+  {
+    path: 'post/angular-webcomponents', component: AngularWebcomponentsComponent
   },
 ];
 

@@ -1,42 +1,42 @@
-import { Component, OnInit, Renderer2, Inject } from "@angular/core";
-import { ElementRef, AfterViewInit } from "@angular/core";
-import { Meta, Title } from "@angular/platform-browser";
+import { Component, OnInit, Renderer2, Inject } from '@angular/core';
+import { ElementRef, AfterViewInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
-import { PostPublishInfoComponent } from "../../post-publish-info/post-publish-info.component";
+import { PostPublishInfoComponent } from '../../post-publish-info/post-publish-info.component';
 
-import * as hljs from "highlight.js";
+import * as hljs from 'highlight.js';
 
 @Component({
-  selector: "app-webpack-en-tus-proyectos-angular",
-  templateUrl: "./webpack-en-tus-proyectos-angular.component.html",
-  styleUrls: ["./../post.common.component.scss"]
+  selector: 'app-webpack-en-tus-proyectos-angular',
+  templateUrl: './webpack-en-tus-proyectos-angular.component.html',
+  styleUrls: ['./../post.common.component.scss']
 })
 export class WebpackEnTusProyectosAngularComponent
   implements OnInit, AfterViewInit {
-  titlepost = "Webpack en tus proyectos Angular";
-  publishDate = "08 de Julio 2017";
-  url = "webpack-en-tus-proyectos-angular";
-  postCategories: string[] = ["Angular", "Webpack"];
+  titlepost = 'Webpack en tus proyectos Angular';
+  publishDate = '08 de Julio 2017';
+  url = 'webpack-en-tus-proyectos-angular';
+  postCategories: string[] = ['Angular', 'Webpack'];
 
   constructor(private eltRef: ElementRef, meta: Meta, title: Title) {
-    title.setTitle("Webpack en tus proyectos Angular");
+    title.setTitle('Webpack en tus proyectos Angular');
     meta.addTags([
       {
-        name: "keywords",
-        content: "angular angularjs webapp webpack eject spa angular-cli"
+        name: 'keywords',
+        content: 'angular angularjs webapp webpack eject spa angular-cli'
       },
       // tslint:disable-next-line:max-line-length
       {
-        name: "description",
+        name: 'description',
         content:
-          "Angular tip para utilizar webpack en los aplicativos angular generados desde el asistente angular-cli"
+          'Angular tip para utilizar webpack en los aplicativos angular generados desde el asistente angular-cli'
       },
-      { name: "robots", content: "Index, Follow" }
+      { name: 'robots', content: 'Index, Follow' }
     ]);
   }
 
   ngOnInit() {
-    const scriptLdJson = document.createElement("script");
+    const scriptLdJson = document.createElement('script');
     scriptLdJson.text = `
       { "@context": "http://schema.org",
       "@type": "BlogPosting",
@@ -67,13 +67,13 @@ export class WebpackEnTusProyectosAngularComponent
       "mainEntityOfPage": "https://victordeandres.es/post"
       }
     `;
-    scriptLdJson.type = "application/ld+json";
-    document.getElementsByTagName("head")[0].appendChild(scriptLdJson);
+    scriptLdJson.type = 'application/ld+json';
+    document.getElementsByTagName('head')[0].appendChild(scriptLdJson);
   }
 
   ngAfterViewInit() {
     this.eltRef.nativeElement
-      .querySelectorAll("pre code")
+      .querySelectorAll('pre code')
       .forEach(code => hljs.highlightBlock(code));
   }
 }

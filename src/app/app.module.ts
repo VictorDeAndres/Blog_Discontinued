@@ -38,6 +38,7 @@ import { GitDesdeLineaComandosComponent } from './post/git-desde-linea-comandos/
 // tslint:disable-next-line:max-line-length
 import { IntroduccionExpresionesRegularesComponent } from './post/introduccion-expresiones-regulares/introduccion-expresiones-regulares.component';
 import { IntroduccionWebcomponentsComponent } from './post/introduccion-webcomponents/introduccion-webcomponents.component';
+import { AngularWebcomponentsComponent } from './post/angular-webcomponents/angular-webcomponents.component';
 // [END] Post
 
 // [START] Post Component View
@@ -75,6 +76,7 @@ import { PostCommentComponent } from './post-comment/post-comment.component';
     GitDesdeLineaComandosComponent,
     IntroduccionExpresionesRegularesComponent,
     IntroduccionWebcomponentsComponent,
+    AngularWebcomponentsComponent,
     PostPublishInfoComponent,
     PostFooterComponent,
     PostCommentComponent,
